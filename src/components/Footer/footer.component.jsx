@@ -16,54 +16,7 @@ class Footer extends Component {
         <div className="container">
             <div className="d-flex justify-content-center row">
                 <div className="col-xl-10">
-                    <div className="footer-feed">
-                        <div className="section-title style-four">
-                            <h2>FROM THE FEED</h2>
-                        </div>
-                        <ul>
-                            <li>
-                                <Link to="/">
-                                    <img src={require('../../media/instagram/f1.jpg')} alt=""/>
-                               </Link>
-                            </li>
-                            <li>
-                                <Link to="/">
-                                    <img src={require('../../media/instagram/f2.jpg')} alt=""/>
-                               </Link>
-                            </li>
-                            <li>
-                                <Link to="/">
-                                    <img src={require('../../media/instagram/f3.jpg')} alt=""/>
-                               </Link>
-                            </li>
-                            <li>
-                                <Link to="/">
-                                    <img src={require('../../media/instagram/f4.jpg')} alt=""/>
-                               </Link>
-                            </li>
-                            <li>
-                                <Link to="/">
-                                    <img src={require('../../media/instagram/f5.jpg')} alt=""/>
-                               </Link>
-                            </li>
-                            <li>
-                                <Link to="/">
-                                    <img src={require('../../media/instagram/f6.jpg')} alt=""/>
-                               </Link>
-                            </li>
-                            <li>
-                                <Link to="/">
-                                    <img src={require('../../media/instagram/f7.jpg')} alt=""/>
-                               </Link>
-                            </li>
-                            <li>
-                                <Link to="/">
-                                    <img src={require('../../media/instagram/f8.jpg')} alt=""/>
-                               </Link>
-                            </li>
-                            
-                        </ul>
-                    </div>
+                    
                     <div className="footer-three-bottom">
                         <div className="footer-three-left">
                             <Link to="/">

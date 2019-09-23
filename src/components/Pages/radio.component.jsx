@@ -111,16 +111,16 @@ class Radio extends React.Component{
                         <div className="head">Upcoming Programs</div>
                         <ul>
                             <li className="jp-playlist-current style-fullwidth">
-                                <div className="jp-album-me"><Link className="jp-playlist-item-remove">×</Link><Link  className="jp-playlist-item jp-playlist-current" tabindex="0">Happy Life 02 sdfsf<span className="jp-artist">by Derwood Spinks</span></Link></div>
+                                <div className="jp-album-me"><Link  className="jp-playlist-item jp-playlist-current" tabindex="0">Happy Life 02 sdfsf<span className="jp-artist">by Derwood Spinks</span></Link></div>
                             </li>
                             <li className="jp-playlist-current style-fullwidth">
-                                <div className="jp-album-me"><Link className="jp-playlist-item-remove">×</Link><Link  className="jp-playlist-item jp-playlist-current" tabindex="0">King Magicians <span className="jp-artist">by Derwood Spinks</span></Link></div>
+                                <div className="jp-album-me"><Link  className="jp-playlist-item jp-playlist-current" tabindex="0">King Magicians <span className="jp-artist">by Derwood Spinks</span></Link></div>
                             </li>
                             <li className="jp-playlist-current style-fullwidth">
-                                <div className="jp-album-me"><Link className="jp-playlist-item-remove">×</Link><Link  className="jp-playlist-item jp-playlist-current" tabindex="0">Leaving it Behind <span className="jp-artist">by Derwood Spinks</span></Link></div>
+                                <div className="jp-album-me"><Link  className="jp-playlist-item jp-playlist-current" tabindex="0">Leaving it Behind <span className="jp-artist">by Derwood Spinks</span></Link></div>
                             </li>
                             <li className="jp-playlist-current style-fullwidth">
-                                <div className="jp-album-me"><Link className="jp-playlist-item-remove">×</Link><Link  className="jp-playlist-item jp-playlist-current" tabindex="0">Happy Life 02 sdfsf<span className="jp-artist">by Derwood Spinks</span></Link></div>
+                                <div className="jp-album-me"><Link  className="jp-playlist-item jp-playlist-current" tabindex="0">Happy Life 02 sdfsf<span className="jp-artist">by Derwood Spinks</span></Link></div>
                             </li>
 
                             

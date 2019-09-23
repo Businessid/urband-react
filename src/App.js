@@ -1,7 +1,7 @@
 import React , { Component } from 'react'
 import ReactDOM from "react-dom";
-import { createBrowserHistory } from 'history';
 import { Route, BrowserRouter as Router, Switch} from 'react-router-dom'
+import { withRouter } from 'react-router';
 import Header from './components/header/header'
 import Footer from './components/Footer/footer.component'
 import HomePage from './components/Pages/home.component'
@@ -18,42 +18,56 @@ import Tickets from './components/Pages/ticket.component'
 import ComingSoon from './components/Pages/comingsoon.component'
 import './assets/intro/css/intro.css';
 import './assets/css/app.css';
-class App extends Component{  //React.Component we can use on import on top
 
-  
+class ScrollToTop extends Component {
+  componentDidUpdate(prevProps) {
+    if (this.props.location.pathname !== prevProps.location.pathname) {
+      window.scrollTo(0, 0);
+    }
+  }
+  render() {
+    return this.props.children;
+  }
+}
+const Scroll = withRouter(ScrollToTop);
+
+
+class App extends Component{
 
   render(){
 
     return (
-      <Router onUpdate={() => window.scrollTo(0, 0)} history={createBrowserHistory}>
+      <Router>
         <div className="AppContainer hero-site">
           <Header />
+          <Scroll>
               <Switch>
-              <Route exact path="/index" component={HomePage} />
-              <Route path="/who-we-are" component={WhoWeAre} />
-              <Route path="/event" component={Event} />
-              <Route path="/artist" component={Artist} />
-              <Route path="/contact" component={Contact} />
-              <Route path="/what-we-do" component={WhatweDo} />
-              <Route path="/clients" component={Clients} />
-              <Route path="/gallery" component={Gallery} />
-              <Route path="/radio" component={Radio} />
-              <Route path="/gang" component={Gang} />
-              <Route path="/tickets" component={Tickets} />
-              <Route path="/coming-soon" component={ComingSoon} />
-              <HomePage/>
-              <WhoWeAre/>
-              <WhatweDo/>
-              <Event/>
-              <Artist/>
-              <Contact/>
-              <Clients/>
-              <Gallery/>
-              <Radio/>
-              <Gang/>
-              <Tickets/>
-              <ComingSoon/>
-            </Switch>
+                <Route exact path="/index" component={HomePage} />
+                <Route path="/who-we-are" component={WhoWeAre} />
+                <Route path="/event" component={Event} />
+                <Route path="/artist" component={Artist} />
+                <Route path="/contact" component={Contact} />
+                <Route path="/what-we-do" component={WhatweDo} />
+                <Route path="/clients" component={Clients} />
+                <Route path="/gallery" component={Gallery} />
+                <Route path="/radio" component={Radio} />
+                <Route path="/gang" component={Gang} />
+                <Route path="/tickets" component={Tickets} />
+                <Route path="/coming-soon" component={ComingSoon} />
+                <HomePage/>
+                <WhoWeAre/>
+                <WhatweDo/>
+                <Event/>
+                <Artist/>
+                <Contact/>
+                <Clients/>
+                <Gallery/>
+                <Radio/>
+                <Gang/>
+                <Tickets/>
+                <ComingSoon/>
+              </Switch>
+            </Scroll>
           <Footer/>
          </div>
       </Router>

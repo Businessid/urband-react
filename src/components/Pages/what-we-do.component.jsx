@@ -1,5 +1,4 @@
 import React , {Component} from 'react';
-import PreviousShowHome from '../PreviousShows/previous-show.component'
 import { Link } from 'react-router-dom'
 
 class WhatweDo extends React.Component{
@@ -119,9 +118,7 @@ class WhatweDo extends React.Component{
 
                         </div>
                     </div>
-                        <div className="row services-secton-two">
-                        <PreviousShowHome/>
-                        </div>
+                       
                 </div>
                 
 
