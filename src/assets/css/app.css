@@ -213,6 +213,18 @@ img {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Changa", sans-serif;
 }
+.section-hero{
+  width:100%;
+  padding: 120px 0;
+}
+.hero-bg{
+  background-color: #f60038;
+  color: #ffffff;
+}
+.black-hero-bg{
+  background-color: #0e0e0e;
+  color: #ffffff;
+}
 .about-box{
   display: flex;
   align-items: center
@@ -16419,6 +16431,7 @@ ul.products li.product-two .ajax_add_to_cart i {
 }
 .what-we-do-section .side-img {
   background-image: url("../../media/about/what-we-do.jpg");
+  box-shadow: 2px 2px 55px 5px hsla(0, 0%, 53%, 0.22);
 }
 .side-img {
   position: absolute;
@@ -16429,7 +16442,7 @@ ul.products li.product-two .ajax_add_to_cart i {
   background-size: cover;
 }
 .doing-item .doing-icon {
-  color: #fc427f;
+  color: #f6194b;
   font-size: 3.5rem;
   line-height: 1;
 }
@@ -16449,4 +16462,29 @@ ul.products li.product-two .ajax_add_to_cart i {
 .blog-posts h2{
     font-size: 4em;
     margin-bottom: 0.5em;
+}
+  /*--------------------------------------------------------------
+  ## Info Urband
+  --------------------------------------------------------------*/
+  .theme-bg {
+    background-color: #fc427f;
+    color: #ffffff;
+}
+.band-info-section {
+  padding: 65px 0;
+}
+.band-info-icon {
+  font-size: 2.9rem;
+  line-height: 1;
+  color:#f6194b;
+}
+.band-info-title {
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-bottom: 9px;
+}
+.band-info-content {
+  font-weight: 700;
+  margin-bottom: 0;
+  font-size: 1.2em;
 }

@@ -27,53 +27,42 @@ class Header extends React.Component{
                         </NavLink>
                         </li>
                         <li className="menu-item-has-children">
-                        <NavLink to="/" className="in-array">
-                            About   
-                            <ul className="sub-menu">
-                            <li><NavLink exact to="/who-we-are" activeClassName="selected">Who we are</NavLink></li>
-                            <li><NavLink exact to="/what-we-do" activeClassName="selected">what we do</NavLink></li>
-                            <li><NavLink exact to="/gang">the gang</NavLink></li>
-                            </ul>
-
-                        </NavLink>
-                        </li>
-                        <li className="menu-item-has-children">
-                        <NavLink exact to="/event" activeClassName="selected" className="in-array">Events
-						</NavLink>			
-						</li>
-                        
-								<li className="menu-item-has-children">
                                 <NavLink exact to="/"  className="in-array">Studio
 										<ul className="sub-menu">
 										<li><Link to="/artist">Artists</Link></li>
 										<li><Link to="/clients">Clients</Link></li>
 										</ul>
 								</NavLink>	
-								</li>
-
-								<li className="menu-item-has-children">
-                                <NavLink exact to="/radio"  className="in-array" activeClassName="selected">Radio</NavLink>
-									
-								</li>
+						</li>
+                        <li className="menu-item-has-children">
+                                <NavLink exact to="/radio"  className="in-array" activeClassName="selected">Radio</NavLink>	
+						</li>
+                        <li className="menu-item-has-children">
+                        <NavLink exact to="/event" activeClassName="selected" className="in-array">Events
+						</NavLink>			
+						</li>
 								
-								
-								<li className="menu-item-has-children">
-                                <Link to="/coming-soon"  className="in-array">Blog</Link>
-									
-								</li>
-								<li><NavLink exact to="/gallery" activeClassName="selected" className="in-array">Gallery</NavLink></li>
-								<li className="menu-item-has-children">
-                                <NavLink to="/" className="in-array">Purchase
-									<ul className="sub-menu">
-									<li><Link to="/coming-soon">Event Tickets</Link></li>
-									<li><Link to="/coming-soon">Studio Bookings</Link></li>
-									<li><Link to="/coming-soon">Merchandise</Link></li>
-									</ul>
-                                </NavLink>
-								</li>
-								<li className="menu-item-has-children">
-                                <NavLink exact to="/contact" className="in-array" activeClassName="selected">Contact</NavLink>
-								</li>
+                        <li className="menu-item-has-children">
+                        <NavLink to="/who-we-are" className="in-array">About</NavLink>
+                        </li>
+                    
+                        <li className="menu-item-has-children">
+                        <Link to="/coming-soon"  className="in-array">Vlog</Link>
+                            
+                        </li>
+                        <li><NavLink exact to="/gallery" activeClassName="selected" className="in-array">Gallery</NavLink></li>
+                        <li className="menu-item-has-children">
+                        <NavLink to="/" className="in-array">Purchase
+                            <ul className="sub-menu">
+                            <li><Link to="/coming-soon">Event Tickets</Link></li>
+                            <li><Link to="/coming-soon">Studio Bookings</Link></li>
+                            <li><Link to="/coming-soon">Merchandise</Link></li>
+                            </ul>
+                        </NavLink>
+                        </li>
+                        <li className="menu-item-has-children">
+                        <NavLink exact to="/contact" className="in-array" activeClassName="selected">Contact</NavLink>
+                        </li>
                         </ul>
                     </div>
                     

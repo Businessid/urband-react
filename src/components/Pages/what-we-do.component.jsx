@@ -8,24 +8,6 @@ class WhatweDo extends React.Component{
         return (
            
          <div>
-            
-                <section className="page-header artist-banner">
-                    <div className="tim-container">
-                        <div className="page-header-title text-center">
-                        <h3>Delivering creative event and brand experiences</h3>
-                        <h2>What We Do</h2>
-                        </div>
-
-                        <div className="breadcrumbs">
-                        <Link to="/">Home</Link>
-                            <span>/</span>
-                            <span>What We Do</span>
-                        </div>
-
-                    </div>
-		
-                </section>
-
             <div className="page-padd">
                 <div class="container">
                         <div className="section-title style-four text-center">
@@ -120,15 +102,8 @@ class WhatweDo extends React.Component{
                     </div>
                        
                 </div>
-                
 
             </div>
-
-      
-       
-				
-
-	
 		</div>
            
            

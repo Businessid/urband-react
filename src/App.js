@@ -9,7 +9,6 @@ import WhoWeAre from './components/Pages/who-we-are.component'
 import Event from './components/Pages/event.component'
 import Artist from './components/Pages/artist.component'
 import Contact from './components/Pages/contact.component'
-import WhatweDo from './components/Pages/what-we-do.component'
 import Clients from './components/Pages/clients.component'
 import Gallery from './components/Pages/gallery.component'
 import Radio from './components/Pages/radio.component'
@@ -47,7 +46,6 @@ class App extends Component{
                 <Route path="/event" component={Event} />
                 <Route path="/artist" component={Artist} />
                 <Route path="/contact" component={Contact} />
-                <Route path="/what-we-do" component={WhatweDo} />
                 <Route path="/clients" component={Clients} />
                 <Route path="/gallery" component={Gallery} />
                 <Route path="/radio" component={Radio} />
@@ -56,7 +54,6 @@ class App extends Component{
                 <Route path="/coming-soon" component={ComingSoon} />
                 <HomePage/>
                 <WhoWeAre/>
-                <WhatweDo/>
                 <Event/>
                 <Artist/>
                 <Contact/>

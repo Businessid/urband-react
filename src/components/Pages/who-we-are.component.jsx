@@ -1,4 +1,6 @@
-import React , {Component} from 'react';
+import React, {Component} from 'react';
+import  WhatweDo  from '../Pages/what-we-do.component'
+import  InfoHero  from '../Pages/info.component'
 import { Link } from 'react-router-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faMixcloud} from '@fortawesome/free-brands-svg-icons' 
@@ -29,16 +31,9 @@ class WhoWeAre extends React.Component{
                     </div>
             </section>	
 
-            <section className="">
-				<div className="container">
-					<div className="row">
+           
 
-                    </div>
-                </div>
-            </section>        
-
-
-			<section id="event-about">
+			<section className="section-hero pb-0">
 				<div className="container">
 					<div className="row">
 						<div className="section-title style-four">
@@ -57,7 +52,11 @@ class WhoWeAre extends React.Component{
                     </div>
 						</div>
 				</div>
+
+                <InfoHero/>
 			</section>	
+
+          
 
 			<section className="black-bg side-img-section what-we-do-section">
 			<div class="col-sm-6 col-sm-offset-6 side-img d-none d-md-block"></div>
@@ -90,7 +89,9 @@ class WhoWeAre extends React.Component{
 					</div>	
 					</div>
 				</div>
-			</section>	
+			</section>
+
+             <WhatweDo/>	
 
 			</div>	
 
