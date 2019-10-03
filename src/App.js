@@ -1,6 +1,6 @@
 import React , { Component } from 'react'
 import ReactDOM from "react-dom";
-import { Route, BrowserRouter as Router, Switch} from 'react-router-dom'
+import { BrowserRouter as Router,Route,IndexRoute, Switch} from 'react-router-dom'
 import { withRouter } from 'react-router';
 import Header from './components/header/header'
 import Footer from './components/Footer/footer.component'
@@ -11,8 +11,10 @@ import Artist from './components/Pages/artist.component'
 import Contact from './components/Pages/contact.component'
 import Clients from './components/Pages/clients.component'
 import Gallery from './components/Pages/gallery.component'
+import AlbumHome from './components/Pages/Album/album-home.component'
+import AlbumDetail from './components/Pages/Album/album-detail.component'
 import Radio from './components/Pages/radio.component'
-import Gang from './components/Pages/gang.component'
+import ShopHome from './components/Pages/Store/home.component'
 import Tickets from './components/Pages/ticket.component'
 import ComingSoon from './components/Pages/comingsoon.component'
 import './assets/intro/css/intro.css';
@@ -49,9 +51,13 @@ class App extends Component{
                 <Route path="/clients" component={Clients} />
                 <Route path="/gallery" component={Gallery} />
                 <Route path="/radio" component={Radio} />
-                <Route path="/gang" component={Gang} />
+                <Route path="/store" component={ShopHome} />
                 <Route path="/tickets" component={Tickets} />
                 <Route path="/coming-soon" component={ComingSoon} />
+              
+                <Route exact path={"/albums"} component={ AlbumHome } />
+                <Route exact path={"/detail"} component={ AlbumDetail} />
+              
                 <HomePage/>
                 <WhoWeAre/>
                 <Event/>
@@ -60,9 +66,9 @@ class App extends Component{
                 <Clients/>
                 <Gallery/>
                 <Radio/>
-                <Gang/>
                 <Tickets/>
                 <ComingSoon/>
+               
               </Switch>
             </Scroll>
           <Footer/>

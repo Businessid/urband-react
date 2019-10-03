@@ -56,7 +56,7 @@ class Header extends React.Component{
                             <ul className="sub-menu">
                             <li><Link to="/coming-soon">Event Tickets</Link></li>
                             <li><Link to="/coming-soon">Studio Bookings</Link></li>
-                            <li><Link to="/coming-soon">Merchandise</Link></li>
+                            <li><Link to="/store">Merchandise</Link></li>
                             </ul>
                         </NavLink>
                         </li>

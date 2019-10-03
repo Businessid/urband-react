@@ -28,14 +28,12 @@ class Artist extends React.Component{
 
                 <section id="about-two" className="section-padding">
 			<div className="tim-container">
-				<div className="row no-gutters">
+				<div className="row no-gutters artist-row">
 					<div className="col-lg-6">
 						<div className="artist-about pr__30">
 							<h3 className="artist-name"><Link to="">James Robinson</Link></h3>
 							<h6>Genre : Guitarist/Singer</h6>
 							<span>Album: Rockstar, first rain, Love Song (More)</span>
-                            <Link to="" className="tim-btn">View Portfolio</Link>
-
 							<div className="content">
 								<p>
 									There are many variations of passages of Lorem Ipsum available but the majority suffered aboaNalteration in some form by injected humour or randomised words which don't look even slightly nothi belieable. If you are going to use a passage of Lorem Ipsum,
@@ -69,108 +67,18 @@ class Artist extends React.Component{
 			
 
 					<div class="col-lg-6">
-						<div class="album-feature">
-							<img src={require('../../media/about/11.jpg')} alt="Album"/>
-							<div class="artist-music-inner clearfix">
-								<div class="aritist-music">
-									<div class="icon">
-										<i class="tim-music-album"></i>
-									</div>
-
-									<div class="content">
-										<p>13</p>
-										<span>Album</span>
-									</div>
-								</div>
-
-								<div class="aritist-music clearfix">
-									<div class="icon">
-										<i class="tim-music-album-1"></i>
-									</div>
-
-									<div class="content">
-										<p>24</p>
-										<span>Single</span>
-									</div>
-								</div>
-
-								<div class="aritist-music clearfix">
-									<div class="icon">
-										<i class="tim-sound-frecuency"></i>
-									</div>
-
-									<div class="content">
-										<p>17</p>
-										<span>Concerts</span>
-									</div>
-								</div>
-
-								<div class="aritist-music clearfix">
-									<div class="icon">
-										<i class="tim-headphones"></i>
-									</div>
-
-									<div class="content">
-										<p>16</p>
-										<span>Tracks</span>
-									</div>
-								</div>
-							</div>
+						<div class="album-feature right">
+							<img src={require('../../media/about/11.jpg')} className="ink-pattern" alt="Album"/>
 						</div>
 		
 					</div>
 			
 				</div>
             
-            	<div className="row no-gutters">
+            	<div className="row no-gutters artist-row">
 					<div className="col-lg-6">
-						<div className="album-feature">
+						<div className="album-feature left">
                         <img src={require('../../media/about/12.jpg')} alt="Album"/>
-							<div className="artist-music-inner clearfix">
-								<div className="aritist-music">
-									<div className="icon">
-										<i className="tim-music-album"></i>
-									</div>
-
-									<div className="content">
-										<p>13</p>
-										<span>Album</span>
-									</div>
-								</div>
-
-								<div className="aritist-music clearfix">
-									<div className="icon">
-										<i className="tim-music-album-1"></i>
-									</div>
-
-									<div className="content">
-										<p>24</p>
-										<span>Single</span>
-									</div>
-								</div>
-
-								<div className="aritist-music clearfix">
-									<div className="icon">
-										<i className="tim-sound-frecuency"></i>
-									</div>
-
-									<div className="content">
-										<p>17</p>
-										<span>Concerts</span>
-									</div>
-								</div>
-
-								<div className="aritist-music clearfix">
-									<div className="icon">
-										<i className="tim-headphones"></i>
-									</div>
-
-									<div className="content">
-										<p>16</p>
-										<span>Tracks</span>
-									</div>
-								</div>
-							</div>
 						</div>
 				
 					</div>
@@ -180,8 +88,6 @@ class Artist extends React.Component{
 							<h3 class="artist-name"><a href="artist-single.html">Sezar Doue</a></h3>
 							<h6>Genre : Guitarist/Singer</h6>
 							<span>Album: Rockstar, first rain, Love Song (More)</span>
-                            <Link to="" class="tim-btn">View Portfolio</Link>
-
 							<div class="content">
 								<p>
 									There are many variations of passages of Lorem Ipsum available but the majority suffered aboaNalteration in some form by injected humour or randomised words which don't look even slightly nothi belieable. If you are going to use a passage of Lorem Ipsum,

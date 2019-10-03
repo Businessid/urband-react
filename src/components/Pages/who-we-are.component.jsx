@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import  WhatweDo  from '../Pages/what-we-do.component'
 import  InfoHero  from '../Pages/info.component'
+import  Gang  from '../Pages/gang.component'
 import { Link } from 'react-router-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faMixcloud} from '@fortawesome/free-brands-svg-icons' 
@@ -91,7 +92,8 @@ class WhoWeAre extends React.Component{
 				</div>
 			</section>
 
-             <WhatweDo/>	
+             <WhatweDo/>
+             <Gang/>	
 
 			</div>	
 

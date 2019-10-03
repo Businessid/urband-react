@@ -20,7 +20,7 @@ class albumListHome extends Component{
                             <div className="single-3d empty-space">
                             </div>
                             <div className="single-3d">
-                            <Link to="/"><img src={ require('../../media/albumart/1.png') } alt=""/></Link>
+                            <Link to="/albums"><img src={ require('../../media/albumart/1.png') } alt=""/></Link>
                             </div>
                             <div className="single-3d empty-space">
                             </div>

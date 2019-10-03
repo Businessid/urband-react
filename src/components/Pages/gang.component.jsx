@@ -10,22 +10,7 @@ class Gang extends React.Component{
 
         return (
             <div>
-                <section className="page-header artist-banner">
-                    <div className="tim-container">
-                        <div className="page-header-title text-center">
-                        <h2>Gang</h2>
-                        </div>
-
-                        <div className="breadcrumbs">
-                        <Link to="/">Home</Link>
-                            <span>/</span>
-                            <span>Radio</span>
-                        </div>
-
-                    </div>
-            </section>
-
-            <section className="section-padding the-gang">
+            <section className="the-gang">
                 <div className="container">
                 <div className="section-title style-four">
                     <h2>Meet Our Gang</h2>
