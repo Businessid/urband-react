@@ -3,12 +3,26 @@ import { Link } from 'react-router-dom'
 
 class Artist extends React.Component{
 
+	constructor(props){
+		super(props);
+		this.state = {
+			items:[],
+			isLoaded:false
+		}
+	}
+	componentDidMount(){
 
+		const axios = require('axios');
+			axios.post('http://167.71.231.3/api/artists')
+				.then(res => this.setState({isLoaded:true,items:res.data[0]}))
+				.catch(err => console.log(err));
+		}
     render(){
 
+		var  {isLoaded, items} = this.state;
 
         return (
-           
+
             <div>
                  <section className="page-header artist-banner">
                     <div className="tim-container">
@@ -17,11 +31,10 @@ class Artist extends React.Component{
                         </div>
 
                         <div className="breadcrumbs">
-                        <Link to="/">Home</Link>
+                        <Link to="/index">Home</Link>
                             <span>/</span>
                             <span>Artists</span>
                         </div>
-
                     </div>
 		
                 </section>
@@ -31,18 +44,14 @@ class Artist extends React.Component{
 				<div className="row no-gutters artist-row">
 					<div className="col-lg-6">
 						<div className="artist-about pr__30">
-							<h3 className="artist-name"><Link to="">James Robinson</Link></h3>
-							<h6>Genre : Guitarist/Singer</h6>
+							<h3 className="artist-name">{items.name}</h3>
+							<h6>{items.genre}</h6>
 							<span>Album: Rockstar, first rain, Love Song (More)</span>
 							<div className="content">
 								<p>
-									There are many variations of passages of Lorem Ipsum available but the majority suffered aboaNalteration in some form by injected humour or randomised words which don't look even slightly nothi belieable. If you are going to use a passage of Lorem Ipsum,
-									you need believable.
+								{items.about}
 								</p>
-
-								<p>
-									Available but the majority suffered about the are Nalteration in some form by injected humoranomised words which don't look even slightly nothi believable.
-								</p>
+								
 								<p>
 									The majority suffered aboaNalteration in some form by injected humour or randomised words which don't look even slightly nothi belieable. If you are going to use a passage of Lorem Ipsum, you need believable.
 								</p>
@@ -68,7 +77,7 @@ class Artist extends React.Component{
 
 					<div class="col-lg-6">
 						<div class="album-feature right">
-							<img src={require('../../media/about/11.jpg')} className="ink-pattern" alt="Album"/>
+							<img src={items.image} className="ink-pattern" alt="Album"/>
 						</div>
 		
 					</div>
@@ -85,7 +94,7 @@ class Artist extends React.Component{
 			
 					<div class="col-lg-6">
 						<div class="artist-about pl__30 pt_70">
-							<h3 class="artist-name"><a href="artist-single.html">Sezar Doue</a></h3>
+							<h3 class="artist-name">Sezar Doue</h3>
 							<h6>Genre : Guitarist/Singer</h6>
 							<span>Album: Rockstar, first rain, Love Song (More)</span>
 							<div class="content">

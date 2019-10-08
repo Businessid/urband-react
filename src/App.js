@@ -1,6 +1,6 @@
 import React , { Component } from 'react'
-import ReactDOM from "react-dom";
-import { BrowserRouter as Router,Route,IndexRoute, Switch} from 'react-router-dom'
+// import ReactDOM from "react-dom";
+import { BrowserRouter as Router,Route, Switch} from 'react-router-dom'
 import { withRouter } from 'react-router';
 import Header from './components/header/header'
 import Footer from './components/Footer/footer.component'
@@ -54,9 +54,8 @@ class App extends Component{
                 <Route path="/store" component={ShopHome} />
                 <Route path="/tickets" component={Tickets} />
                 <Route path="/coming-soon" component={ComingSoon} />
-              
-                <Route exact path={"/albums"} component={ AlbumHome } />
-                <Route exact path={"/detail"} component={ AlbumDetail} />
+                <Route path="/albums" exact component={ AlbumHome } />
+                <Route path={"/albums/detail/:id"} component={ AlbumDetail} />
               
                 <HomePage/>
                 <WhoWeAre/>
@@ -68,7 +67,6 @@ class App extends Component{
                 <Radio/>
                 <Tickets/>
                 <ComingSoon/>
-               
               </Switch>
             </Scroll>
           <Footer/>

@@ -11,7 +11,7 @@ class sliderHero extends React.Component{
             <div className="tim-container">
               <div id="para" className="paralax">
                 <div id="paralax-1" className="scene">
-                  <div data-depth="-0.50"> <img src={sliderHeroimg1}/></div>
+                  <div> <img src={sliderHeroimg1} alt="banner"/></div>
                 </div>
               </div>
               <div className="baneer-five-content">

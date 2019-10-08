@@ -25,30 +25,30 @@ class albumListHome extends Component{
                             <div className="single-3d empty-space">
                             </div>
                             <div className="single-3d">
-                            <Link to="/"><img src={ require('../../media/albumart/2.png') } alt=""/></Link>
+                            <Link to="/albums"><img src={ require('../../media/albumart/2.png') } alt=""/></Link>
                             </div>
                             <div className="single-3d empty-space">
                             </div>
                             <div className="single-3d">
-                                 <Link to="/"><img src={ require('../../media/albumart/3.png') } alt=""/></Link>
+                                 <Link to="/albums"><img src={ require('../../media/albumart/3.png') } alt=""/></Link>
                             </div>
                            
                             <div className="single-3d">
-                                 <Link to="/"><img src={ require('../../media/albumart/4.png') } alt=""/></Link>
+                                 <Link to="/albums"><img src={ require('../../media/albumart/4.png') } alt=""/></Link>
                             </div>
                            
                             <div className="single-3d">
-                                 <Link to="/"><img src={ require('../../media/albumart/5.png') } alt=""/></Link>
+                                 <Link to="/albums"><img src={ require('../../media/albumart/5.png') } alt=""/></Link>
                             </div>
                             
                             <div className="single-3d">
-                                 <Link to="/"><img src={ require('../../media/albumart/7.png') } alt=""/></Link>
+                                 <Link to="/albums"><img src={ require('../../media/albumart/7.png') } alt=""/></Link>
                             </div>
                             <div className="single-3d">
-                                 <Link to="/"><img src={ require('../../media/albumart/8.png') } alt=""/></Link>
+                                 <Link to="/albums"><img src={ require('../../media/albumart/8.png') } alt=""/></Link>
                             </div>
                             <div className="single-3d">
-                                 <Link to="/"><img src={ require('../../media/albumart/13.png') } alt=""/></Link>
+                                 <Link to="/albums"><img src={ require('../../media/albumart/13.png') } alt=""/></Link>
                             </div>
                         </div>
                     </div>

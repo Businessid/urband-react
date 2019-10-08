@@ -18,8 +18,39 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
 
 class Contact extends React.Component{
 
+	constructor(props){
+		super(props);
+		this.state = {
+			items:[],
+			isLoaded:false
+		}
+	}
+
+	componentDidMount(){
+
+	const axios = require('axios');
+		axios.get('http://167.71.231.3/api/contactus')
+			.then(res => this.setState({isLoaded:true,items:res.data[0]}))
+			.catch(err => console.log(err));
+			// fetch('http://167.71.231.3/api/contactus')
+			// .then(response =>  response.json())
+			// .then(resData => {	console.log("resdata", resData)
+			// 	this.setState({
+			// 		isLoaded:true,
+			// 		items:resData
+			// 	})
+			// });
+	}
+
 
     render(){
+
+		var  {isLoaded, items} = this.state;
+
+		if(!isLoaded){
+			return <div>Loading...</div>
+		}
+		else{
 
         return (
            
@@ -50,7 +81,7 @@ class Contact extends React.Component{
                 />
 
 
-                <section className="contact-info">
+		<section className="contact-info">
 			<div className="container-fluid no-pad">
 				<div className="contact-info-inner">
 					<div className="row no-gutters">
@@ -59,8 +90,7 @@ class Contact extends React.Component{
 								<div className="center-wrap">
                                     <FontAwesomeIcon icon={faAt} className="ico" />
 									<h3>Email Us</h3>
-									<p>Mail:<a href="mailto:name@email.com">info@yoursite.com</a></p>
-									<a href="mailto:name@email.com">info@yoursite.com</a>
+									<p>Mail:<Link href="mailto:name@email.com">{items.email}</Link></p>
 								</div>
 
 							</div>
@@ -71,7 +101,7 @@ class Contact extends React.Component{
 								<div className="center-wrap">
                                  <FontAwesomeIcon icon={faMapMarkerAlt}  className="ico"/>
 									<h3>office location</h3>
-									<p>Address: WE54, New York Queens, NY 12121.</p>
+									<p>{items.location}</p>
 								</div>
 							</div>
 						</div>
@@ -81,8 +111,8 @@ class Contact extends React.Component{
 								<div className="center-wrap">
                                     <FontAwesomeIcon icon={faPhoneAlt} className="ico"/>
 									<h3>call Us</h3>
-									<p>Phone: <a href="tel:158-659-8546">158-659-8546</a></p>
-									<a href="tel:158-659-8546">158-659-8546</a>
+									<p>Phone: <Link href="tel:158-659-8546">{items.phone}</Link></p>
+
 								</div>
 							</div>
 						</div>
@@ -126,7 +156,9 @@ class Contact extends React.Component{
 		</div>
            
            
-        );
+		);
+	}
+
     }
 }
 

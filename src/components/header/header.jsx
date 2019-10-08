@@ -35,7 +35,7 @@ class Header extends React.Component{
 								</NavLink>	
 						</li>
                         <li className="menu-item-has-children">
-                                <NavLink exact to="/radio"  className="in-array" activeClassName="selected">Radio</NavLink>	
+                                <NavLink exact to="/coming-soon"  className="in-array" activeClassName="selected">Radio</NavLink>	
 						</li>
                         <li className="menu-item-has-children">
                         <NavLink exact to="/event" activeClassName="selected" className="in-array">Events
@@ -43,11 +43,11 @@ class Header extends React.Component{
 						</li>
 								
                         <li className="menu-item-has-children">
-                        <NavLink to="/who-we-are" className="in-array">About</NavLink>
+                        <NavLink to="/who-we-are" activeClassName="selected" className="in-array">About</NavLink>
                         </li>
                     
                         <li className="menu-item-has-children">
-                        <Link to="/coming-soon"  className="in-array">Vlog</Link>
+                        <Link exact to="/coming-soon" activeClassName="selected" className="in-array">Vlog</Link>
                             
                         </li>
                         <li><NavLink exact to="/gallery" activeClassName="selected" className="in-array">Gallery</NavLink></li>

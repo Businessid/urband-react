@@ -4,6 +4,8 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
+import DetailHero from '../Pages/Music/detail.component'
+import PlayerHero from '../Pages/Music/player.component'
 
 library.add(faPlay)
 
@@ -54,81 +56,10 @@ class Radio extends React.Component{
 		
                 </section>
 
-                <section className="section-padding album-info-wrapper">
-			<div className="container">
-				<div className="row single-album-info">
+               <DetailHero/>
+               <PlayerHero/>
 
-					<div className="col-md-6 padding-remove">
-						<div className="single-album-image">
-							<img src={require('../../media/album/17.jpg')} alt=""/>
-						</div>
-					</div>
-					
-
-					<div className="col-md-6 padding-remove album-detail">
-						<div className="single-album-details">
-							<div className="details-top">
-								<h6>Life itself! The way</h6>
-								<p>Established fact that a reader will be distracted by readable content of a page when looking at its lay poin usin Ipsum is tmore-or-less.</p>
-							</div>
-
-							<ul>
-								<li>Albume <span>Single</span></li>
-								<li>Artist<span>Bernard Adamus</span></li>
-								<li>Release Day <span>March, 10th, 2018</span></li>
-								<li>Genre <span>R&B,Jazz</span></li>
-								<li>Produce By <span>ThemeIM Entertainment</span></li>
-								<li>Number Of Track <span>16 Tracks</span></li>
-							</ul>
-
-							<div className="single-album-description">
-								<h6>Album Description</h6>
-								<p>Established fact that a reader will be distracted by readable content of a page when looking at its lay poin usin Ipsum is tmore-or-less specimen book. It has survived not only five centuries, but the leap electronic typesetting,</p>
-							</div>
-
-							
-						</div>
-					</div>
-				
-
-				</div>
-				
-			</div>
-			
-		</section>
-
-        <section className="single-album-player section-padding">
-			<div className="container">
-				<div className="row">
-					<div className="add-poster">
-						<img src={require('../../media/about/add-poster.jpg')}/>
-					</div>
-
-              
-                    <img src={require('../../media/album/player.jpg')}/>
-              
-                    <div className="jp-playlist style-fullwidth">
-                        <div className="head">Upcoming Programs</div>
-                        <ul>
-                            <li className="jp-playlist-current style-fullwidth">
-                                <div className="jp-album-me"><Link  className="jp-playlist-item jp-playlist-current" tabindex="0">Happy Life 02 sdfsf<span className="jp-artist">by Derwood Spinks</span></Link></div>
-                            </li>
-                            <li className="jp-playlist-current style-fullwidth">
-                                <div className="jp-album-me"><Link  className="jp-playlist-item jp-playlist-current" tabindex="0">King Magicians <span className="jp-artist">by Derwood Spinks</span></Link></div>
-                            </li>
-                            <li className="jp-playlist-current style-fullwidth">
-                                <div className="jp-album-me"><Link  className="jp-playlist-item jp-playlist-current" tabindex="0">Leaving it Behind <span className="jp-artist">by Derwood Spinks</span></Link></div>
-                            </li>
-                            <li className="jp-playlist-current style-fullwidth">
-                                <div className="jp-album-me"><Link  className="jp-playlist-item jp-playlist-current" tabindex="0">Happy Life 02 sdfsf<span className="jp-artist">by Derwood Spinks</span></Link></div>
-                            </li>
-
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>    
+       
 
 
         

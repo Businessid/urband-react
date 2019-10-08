@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/urband-react/precache-manifest.23933ea68a718cebc5d19767123fa85a.js"
+  "/urband-react/precache-manifest.b7e0d24184e9284e3e8d3e166f0a23dd.js"
 );
 
 self.addEventListener('message', (event) => {
