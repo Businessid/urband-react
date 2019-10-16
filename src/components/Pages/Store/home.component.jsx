@@ -1,12 +1,9 @@
-import React, {Component} from 'react';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faAt,faMapMarkerAlt,faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import  FilterLeft  from '../Store/filter.component'
 import ProductListHero from '../../ListingGrid/product-list-hero.component'
 
-class ShopHome extends React.Component{
+class ShopHome extends Component{
 
     render(){
         
@@ -44,7 +41,7 @@ class ShopHome extends React.Component{
                                 <div className="product-top-menu">
                                     <div className="product-menu-wrapper">
                                         <span>Short By</span>
-                                        <select id="product-short" class="product-select">
+                                        <select id="product-short" className="product-select">
                                             <option value="">Featured</option>
                                             <option value="january">Best Selling</option>
                                             <option value="march">Price, high to low</option>

@@ -1,7 +1,7 @@
 import React , {Component} from 'react';
 import { Link } from 'react-router-dom'
 import './product-list.component.css'
-class ProductListHero extends React.Component{
+class ProductListHero extends Component{
     
 constructor(props){
     super(props)
@@ -16,7 +16,7 @@ constructor(props){
                 <div className="product-thumb">
                     <img className="img-responsive" src={require('../../media/album/1.jpg')} alt="Product Thumb"/>
                     <div className="product-thumb-hover">
-                        <div className="btn-cart"><Link>Add to Cart</Link></div>
+                        <div className="btn-cart"><Link to="/">Add to Cart</Link></div>
                     </div>
                 </div>
                 <div className="product-detail">

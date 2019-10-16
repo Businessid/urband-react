@@ -9,7 +9,7 @@ import PreviousShowHome from '../PreviousShows/previous-show.component'
 import UpcomingShowHome from '../UpcomingShows/upcoming-shows.component'
 import SpotLight from '../SpotLight/spot-light.component'
 
-class HomePage extends React.Component{
+class HomePage extends Component{
 
 
     render(){

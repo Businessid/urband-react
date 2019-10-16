@@ -1,12 +1,11 @@
 import React , {Component} from 'react';
-import { Link } from 'react-router-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBookmark,faTrophy,faUsers,faTheaterMasks } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 library.add(faBookmark,faTrophy,faUsers,faTheaterMasks)
 
-class InfoHero extends React.Component{
+class InfoHero extends Component{
 
     render(){
 

@@ -1,7 +1,6 @@
-import React , {Component} from 'react';
-import { Link } from 'react-router-dom'
+import React, { Component } from 'react';
 
-class WhatweDo extends React.Component{
+class WhatweDo extends Component{
 
     render(){
 

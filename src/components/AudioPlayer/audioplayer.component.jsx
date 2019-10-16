@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import './audioplayer.component.css'
 
@@ -464,13 +465,13 @@ class H5AudioPlayer extends Component {
             {incompatibilityMessage}
           </audio>
           <div className="toggle-play-wrapper" style={style.togglePlayWrapper}>
-            <a className="toggle-play-button" onClick={e => this.togglePlay(e)} style={style.togglePlay}>
+            <Link className="toggle-play-button" onClick={e => this.togglePlay(e)} style={style.togglePlay}>
               {isPlaying ? (
                 <i className="pause-icon" style={style.pause} />
               ) : (
                 <i className="play-icon" style={style.play} />
               )}
-            </a>
+            </Link>
           </div>
           <div className="progress-bar-wrapper" style={style.progressBarWrapper}>
             <div

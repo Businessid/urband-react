@@ -16,7 +16,7 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
   </GoogleMap>
 ))
 
-class Contact extends React.Component{
+class Contact extends Component{
 
 	constructor(props){
 		super(props);
@@ -32,14 +32,14 @@ class Contact extends React.Component{
 		axios.get('http://167.71.231.3/api/contactus')
 			.then(res => this.setState({isLoaded:true,items:res.data[0]}))
 			.catch(err => console.log(err));
-			// fetch('http://167.71.231.3/api/contactus')
-			// .then(response =>  response.json())
-			// .then(resData => {	console.log("resdata", resData)
-			// 	this.setState({
-			// 		isLoaded:true,
-			// 		items:resData
-			// 	})
-			// });
+			fetch('http://167.71.231.3/api/contactus')
+			.then(response =>  response.json())
+			.then(resData => {	//console.log("resdata", resData)
+				this.setState({
+					isLoaded:true,
+					items:resData
+				})
+			});
 	}
 
 
@@ -74,7 +74,7 @@ class Contact extends React.Component{
 
                 <MyMapComponent
                 isMarkerShown
-                googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+                googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyCH4m_zPhRkylreOmJEwM6uI6bqNUMZ450"
                 loadingElement={<div style={{ height: `100%` }} />}
                 containerElement={<div style={{ height: `400px` }} />}
                 mapElement={<div style={{ height: `100%` }} />}
@@ -90,7 +90,7 @@ class Contact extends React.Component{
 								<div className="center-wrap">
                                     <FontAwesomeIcon icon={faAt} className="ico" />
 									<h3>Email Us</h3>
-									<p>Mail:<Link href="mailto:name@email.com">{items.email}</Link></p>
+									<p>Mail:<Link to ={"mailto:" + items.email}>{items.email}</Link></p>
 								</div>
 
 							</div>

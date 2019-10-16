@@ -1,7 +1,6 @@
 import React , {Component} from 'react';
-import { Link } from 'react-router-dom'
 import './header.component.css'
-class StoreHeader extends React.Component{
+class StoreHeader extends Component{
 
 
     render(){

@@ -10,7 +10,7 @@ import PlayerHero from '../Pages/Music/player.component'
 library.add(faPlay)
 
 
-class Radio extends React.Component{
+class Radio extends Component{
 
 
     render(){

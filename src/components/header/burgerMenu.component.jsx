@@ -1,4 +1,4 @@
-import React , {Component} from 'react';
+import React, { Component } from 'react';
 import { Link, NavLink } from 'react-router-dom'
 import { slide as Menu } from 'react-burger-menu'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 library.add(faAngleDown)
  
-class burgerMenu extends React.Component {
+class burgerMenu extends Component {
   showSettings (event) {
     event.preventDefault();
   }

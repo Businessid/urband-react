@@ -2,7 +2,7 @@ import React , {Component} from 'react';
 import { Link } from 'react-router-dom'
 import DetailHero from '../../Pages/Music/detail.component'
 import PlayerHero from '../../Pages/Music/player.component'
-class AlbumDetail extends React.Component{
+class AlbumDetail extends Component{
 
 
     render(){ 

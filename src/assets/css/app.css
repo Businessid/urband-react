@@ -434,11 +434,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Changa", sans-serif;
   border-radius: 5px;
 }
-
-.tim-btn:hover {
-  color: #f60038;
+.tim-btn:hover,.tim-btn:focus {
+  color: #f60038 !important;
+  opacity: 0.9;
 }
-
 .tim-btn.tim-btn-bgt {
   border: 1px solid #e4e4e4;
   color: #363636;
@@ -1817,11 +1816,6 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-#header-menu-magic-line > li a {
-  position: relative;
-  display: block;
-  font-family: "Changa", sans-serif;
-}
 
 #header-menu-magic-line > li a i {
   font-size: 13px;
@@ -1920,16 +1914,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header-menu-magic-line li {
-  display: inline-block;
+    display: inline-flex;
+    font-family: "Changa", sans-serif;
+    font-size: 17px;
+    margin: 0 20px;
+    padding: 28px 0;
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
 }
 #header-menu-magic-line li a {
   color: #fff;
   text-transform: uppercase;
-  font-size: 17px;
-  margin: 0 20px;
-  padding: 28px 0;
-  position: relative;
   transition: 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+  width: 100%;
+  height: 100%;
 }
 .interactive:active {
   transition: none;
@@ -5558,9 +5557,10 @@ h1, h2, h3, h4, h5, h6 {
   background: #e43a90;
 }
 
-.blog-post-grid .post-type-icon span {
+.post-type-icon span {
   display: block;
-  font-size: 16px;
+  font-size: 17px;
+  font-weight: 700;
 }
 
 .blog-post-grid .post-type-icon:before, .blog-post-grid .post-type-icon:after {
@@ -5588,7 +5588,7 @@ h1, h2, h3, h4, h5, h6 {
   content: '';
   height: 65px;
   width: 65px;
-  background: #e43a90;
+  background: #fa5c71;
   left: 0;
   top: 0;
   -webkit-transform: rotate(45deg);
@@ -5620,10 +5620,11 @@ h1, h2, h3, h4, h5, h6 {
 .blog-post {
   border-radius: 20px;
   background: #fff;
-  -webkit-box-shadow: 0px 3px 21px 0px rgba(204, 204, 204, 0.35);
-          box-shadow: 0px 3px 21px 0px rgba(204, 204, 204, 0.35);
+  -webkit-box-shadow: 0px 11px 15px 0px rgba(204, 204, 204, 0.4);
+          box-shadow: 0px 11px 15px 0px rgba(204, 204, 204, 0.4);
   margin-bottom: 30px;
   overflow: hidden;
+  color: #494848;
 }
 
 .blog-post .post-thumbnail a {
@@ -5639,15 +5640,52 @@ h1, h2, h3, h4, h5, h6 {
 .blog-post.blog-grid .entry-content-wrapper {
   padding: 25px 30px;
 }
+.event-title{
+  text-overflow: ellipsis;
+  font-size: 21px;
+  font-weight: 500;
+  margin: 0.7em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.event-status {
+  font-size: 0.9231rem;
+  text-transform: uppercase;
+  list-style: none;
+  margin: 0;
+  color: #FFFFFF;
+  padding: 5px 21px;
+  border-radius: 25px;
+  font-weight: 500;
+  background-color: #121217;
 
+}
+.event-shortdetails{
+  margin-top: 1em !important;
+}
+.event-shortdetails li{
+  display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  align-items: center;
+  float: none !important;
+  list-style: none;
+  line-height: 1.4 !important;
+  width: auto !important;
+  padding: 0 !important;
+  margin-bottom: 1em;
+}
+.event-shortdetails li .ico{
+  font-size:1.7em;
+  margin-right: 0.3em;
+  color: #fa5c71;
+}
 .blog-post .tim-btn-bgt.read-more-btn {
   border-color: #e4e4e4;
   color: #363636;
 }
 
-.blog-post .tim-btn-bgt.read-more-btn:hover {
-  color: #e43a90;
-}
 
 .entry-content-wrapper {
   padding: 30px;
@@ -5680,6 +5718,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 10px;
   border-radius: 50%;
   background: #464646;
+  display: none;
 }
 
 .entry-content-wrapper .entry-meta ul.meta {
@@ -5750,6 +5789,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .entry-content-wrapper .entry-content {
   margin-bottom: 30px;
+}
+.entry-content-wrapper .entry-content p{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .post-on {
@@ -7196,11 +7240,13 @@ ul.comment-list .comment-body .reply a:hover {
 }
 .artist-row{
   align-items: center;
+  margin-bottom: 3em;
 }
 .album-feature {
   position: relative;
   /* overflow: hidden; */
   text-align: center;
+  height: 355px;
 }
 .album-feature:after{
     position: absolute;
@@ -7227,10 +7273,16 @@ ul.comment-list .comment-body .reply a:hover {
 }
 
 .album-feature img {
-  max-width: 100%;
-  transition: transform .3s ease;
-  height:405px;
-  opacity: 0.9;
+    transition: transform .3s ease;
+    opacity: 0.9;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
 }
 .artist-row:hover .album-feature img {
   transform: scale(1.1);
@@ -7517,6 +7569,7 @@ ul.comment-list .comment-body .reply a:hover {
   margin-top: 30px;
   font-size: 16px;
   line-height: 20px;
+  border: 2px solid #000;
 }
 
 @media (max-width: 991px) {
@@ -9525,8 +9578,8 @@ margin-left: 0 !important;
   border-color: #fff;
 }
 
-.schedule-ticket .content .tim-btn:hover {
-  color: #e43a90;
+.schedule-ticket .content .tim-btn:hover,.schedule-ticket .content .tim-btn:focus  {
+ opacity:0.9;
 }
 
 .schedule {
@@ -16037,6 +16090,23 @@ ul.products li.product-two .ajax_add_to_cart i {
     margin-top: 2em;
     margin-bottom: 1em;
   }
+  .client-avathar figure{
+    width:151px;
+    height:151px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .fit-it {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    opacity: 1;
+    max-width: 100%;
+    max-height: 100%;
+}
   .client-avathar p{
     font-size: 15px;
     margin-top: 1em;
@@ -16073,12 +16143,13 @@ ul.products li.product-two .ajax_add_to_cart i {
   width:100%;
 }
 .client-list li {
-  width: 111px;
-  height: 111px;
+  width: 200px;
+  height: 200px;
   align-items: center;
   display: inline-flex;
   justify-content: center;
-  margin-right: 1.7em;
+  margin: 0 auto;
+  position: relative;
 }
 .client-list li img{
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
@@ -16646,4 +16717,14 @@ ul.products li.product-two .ajax_add_to_cart i {
 }
 .related-album-single.bottom{
   margin-top: 5em;
+}
+.artist-timeline{
+  display: grid;
+    grid-gap: 4.75em;
+    grid-template-areas:
+        ". entry1"
+        "entry2 ."
+        ". entry3"
+        "entry4 ."
+        ". entry5";
 }

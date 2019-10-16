@@ -9,7 +9,7 @@ import { faGlassCheers,faMicrophone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 library.add(faGlassCheers,faMixcloud,faMicrophone)
-class WhoWeAre extends React.Component{
+class WhoWeAre extends Component{
 
 
     render(){
@@ -48,7 +48,7 @@ class WhoWeAre extends React.Component{
 					<div className="row">
 						<div className="col-12 text-center">
                         <div className="band-img">
-                            <img className="img-responsive"src={require('../../media/about/about.jpg')} alt="About Band Image"/>
+                            <img className="img-responsive"src={require('../../media/about/about.jpg')} alt="About Band"/>
                         </div>
                     </div>
 						</div>

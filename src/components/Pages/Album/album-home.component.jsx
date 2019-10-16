@@ -8,7 +8,7 @@ import ProductListHero from '../../ListingGrid/product-list-hero.component'
 
 library.add(faPlay)
 
-class AlbumHome extends React.Component{
+class AlbumHome extends Component{
     state={
         artist:[
             {id:1,name:'John Lenon',released:"22-12-2018"},

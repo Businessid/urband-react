@@ -1,9 +1,8 @@
 import React , {Component} from 'react';
 import Coverflow from 'react-coverflow';
 import { StyleRoot } from 'radium';
-import { Link } from 'react-router-dom'
 
-class Gang extends React.Component{
+class Gang extends Component{
 
 
     render(){

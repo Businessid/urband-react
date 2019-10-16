@@ -1,6 +1,5 @@
 import React , {Component} from 'react';
-import { Link } from 'react-router-dom'
-class DetailHero extends React.Component{
+class DetailHero extends Component{
 
 
     render(){ 
@@ -16,7 +15,7 @@ class DetailHero extends React.Component{
 
 					<div className="col-md-6 padding-remove">
 						<div className="single-album-image">
-							<img src={require('../../../media/album/17.jpg')} alt=""/>
+							<img src={require('../../../media/album/17.jpg')} alt="album Info"/>
 						</div>
 					</div>
 					

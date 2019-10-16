@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -43,7 +44,7 @@ class playAnimation extends Component{
 									<div className="latest-album-right">
 										<h6>LISTEN DEMO NOW</h6>
 										<div className="latest-album-btn">
-											<a href="#" className="sm2_button"><FontAwesomeIcon icon={faPlay} /></a>
+										<Link to="/"className="sm2_button"><FontAwesomeIcon icon={faPlay} /></Link>
 										</div>
 
 									</div>

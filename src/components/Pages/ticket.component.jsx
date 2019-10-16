@@ -1,13 +1,13 @@
 import React , {Component} from 'react';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faAt,faMapMarkerAlt,faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link } from 'react-router-dom'
+// import { library } from '@fortawesome/fontawesome-svg-core'
+// import { faAt,faMapMarkerAlt,faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { Link } from 'react-router-dom'
 
-library.add(faAt,faMapMarkerAlt,faPhoneAlt)
+// library.add(faAt,faMapMarkerAlt,faPhoneAlt)
 
 
-class Tickets extends React.Component{
+class Tickets extends Component{
 
 
     render(){

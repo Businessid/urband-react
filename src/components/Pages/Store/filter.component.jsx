@@ -32,21 +32,21 @@ class VolumeSlider extends Component {
             </div>
             <div className="filter-left-type">
               <h3 className="title">By Category</h3>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
-                <label class="form-check-label" for="defaultCheck1">
+              <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
+                <label className="form-check-label" for="defaultCheck1">
                   Popular
                 </label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
-                <label class="form-check-label" for="defaultCheck1">
+              <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
+                <label className="form-check-label" for="defaultCheck1">
                   Charts
                 </label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
-                <label class="form-check-label" for="defaultCheck1">
+              <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
+                <label className="form-check-label" for="defaultCheck1">
                   New Releases
                 </label>
               </div>
@@ -54,21 +54,21 @@ class VolumeSlider extends Component {
 
            <div className="filter-left-type">
               <h3 className="title">By Artist</h3>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id=""/>
-                <label class="form-check-label" for="">
+              <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id=""/>
+                <label className="form-check-label" for="">
                   Sami Yusuf
                 </label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id=""/>
-                <label class="form-check-label" for="">
+              <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id=""/>
+                <label className="form-check-label" for="">
                   John Lenon
                 </label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id=""/>
-                <label class="form-check-label" for="">
+              <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id=""/>
+                <label className="form-check-label" for="">
                   Jim Morrison
                 </label>
               </div>

@@ -4,7 +4,7 @@ import '../header/header.component.css';
 import Logo from '../../assets/img/logo_5.png';
 import BurgerMenu from '../header/burgerMenu.component'
 
-class Header extends React.Component{
+class Header extends Component{
 
 
     render(){
@@ -16,52 +16,51 @@ class Header extends React.Component{
                 <div className="header-magic-line-inner clearfix">
                     <div id="site-logo" className="float-left">
                     <NavLink to="/" className="logo-main">
-                        <img src={Logo}/>
+                        <img src={Logo} alt="hero urband"/>
                     </NavLink>
                     </div>
                     <div className="nav">
                         <ul className="group" id="header-menu-magic-line">
                         <li>
-                        <NavLink exact to="/index" activeClassName="selected" className="in-array">
+                        <NavLink  to="/index" activeClassName="selected" className="in-array">
                            Home 
                         </NavLink>
                         </li>
-                        <li className="menu-item-has-children">
-                                <NavLink exact to="/"  className="in-array">Studio
-										<ul className="sub-menu">
-										<li><Link to="/artist">Artists</Link></li>
-										<li><Link to="/clients">Clients</Link></li>
-										</ul>
-								</NavLink>	
+                        <li className="menu-item-has-children in-array">
+                              Studio
+                            <ul className="sub-menu">
+                            <li><Link to="/artist">Artists</Link></li>
+                            <li><Link to="/clients">Clients</Link></li>
+                            </ul>	
+						</li>
+                        <li>
+                                <NavLink  to="/coming-soon"  className="in-array" activeClassName="selected">Radio</NavLink>	
 						</li>
                         <li className="menu-item-has-children">
-                                <NavLink exact to="/coming-soon"  className="in-array" activeClassName="selected">Radio</NavLink>	
-						</li>
-                        <li className="menu-item-has-children">
-                        <NavLink exact to="/event" activeClassName="selected" className="in-array">Events
+                        <NavLink  to="/event-list" activeClassName="selected" className="in-array">Events
 						</NavLink>			
 						</li>
 								
-                        <li className="menu-item-has-children">
+                        <li>
                         <NavLink to="/who-we-are" activeClassName="selected" className="in-array">About</NavLink>
                         </li>
                     
-                        <li className="menu-item-has-children">
-                        <Link exact to="/coming-soon" activeClassName="selected" className="in-array">Vlog</Link>
+                        <li>
+                        <Link  to="/coming-soon"  className="in-array">Vlog</Link>
                             
                         </li>
-                        <li><NavLink exact to="/gallery" activeClassName="selected" className="in-array">Gallery</NavLink></li>
-                        <li className="menu-item-has-children">
-                        <NavLink to="/" className="in-array">Purchase
+                        <li><NavLink  to="/gallery" activeClassName="selected" className="in-array">Gallery</NavLink></li>
+                        <li className="menu-item-has-children in-array">
+                        Purchase
                             <ul className="sub-menu">
                             <li><Link to="/coming-soon">Event Tickets</Link></li>
                             <li><Link to="/coming-soon">Studio Bookings</Link></li>
                             <li><Link to="/store">Merchandise</Link></li>
                             </ul>
-                        </NavLink>
+                      
                         </li>
-                        <li className="menu-item-has-children">
-                        <NavLink exact to="/contact" className="in-array" activeClassName="selected">Contact</NavLink>
+                        <li>
+                        <NavLink  to="/contact" className="in-array" activeClassName="selected">Contact</NavLink>
                         </li>
                         </ul>
                     </div>

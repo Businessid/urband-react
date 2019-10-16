@@ -8,11 +8,11 @@ import AudioPlayer from 'react-playlist-player'
 
 library.add(faPlay)
 
-class PlayerHero extends React.Component{
+class PlayerHero extends Component{
 
-    constructor(props){
-        super(props)
-    }
+    // constructor(props){
+    //     super(props)
+    // }
 
     state = {
         currentPlayList: {}
