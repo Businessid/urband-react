@@ -50,7 +50,7 @@ class multiCarouselHero extends Component {
 											/>
 											<div className="artist-single-content">
 
-												<h6>James Hetfield</h6>
+												<h6>{item.name}</h6>
 												<p>Band: Metallica</p>
 											</div>
 										</li>
@@ -58,7 +58,6 @@ class multiCarouselHero extends Component {
 								);
 							})
 							: ""}
-
 
 					</ul>
 				</div>
