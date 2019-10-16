@@ -87,7 +87,7 @@ class burgerMenu extends Component {
             <NavLink exact to="/index" onClick={() => this.closeMenu()}>Home</NavLink>
             <NavLink to="/"  className="in-array"  onClick={() => this.onclickStepHandler(1)}>About <span className="ico-drop"><FontAwesomeIcon icon={faAngleDown} /></span></NavLink>
               {
-                this.state.childVisible==1
+                this.state.childVisible===1
                   ? 
                     <div className="sub-drop">
                     <NavLink exact to="/who-we-are" activeClassName="selected" onClick={() => this.closeMenu()}>Who we are</NavLink>
@@ -100,7 +100,7 @@ class burgerMenu extends Component {
               <NavLink exact to="/event"  className="in-array">Events</NavLink>
               <NavLink exact to="/"  className="in-array" onClick={() => this.onclickStepHandler(2)}>Studio<span className="ico-drop"><FontAwesomeIcon icon={faAngleDown} /></span> </NavLink>
               {
-                this.state.childVisible==2
+                this.state.childVisible===2
                   ? 
                   <div className="sub-drop">
                       <NavLink to="/artist" onClick={() => this.closeMenu()}>Artists</NavLink>
@@ -114,7 +114,7 @@ class burgerMenu extends Component {
                <NavLink exact to="/gallery" activeClassName="selected" className="in-array" onClick={() => this.closeMenu()}>Gallery</NavLink>
                <NavLink exact to="/"  className="in-array"  onClick={() => this.onclickStepHandler(3)}>Purchase<span className="ico-drop"><FontAwesomeIcon icon={faAngleDown} /></span> </NavLink>
                {
-                this.state.childVisible==3
+                this.state.childVisible===3
                   ? 
                <div className="sub-drop">
                   <Link to="/">Event Tickets</Link>

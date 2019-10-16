@@ -1,18 +1,10 @@
-import {
-    FETCH_POSTS,
-    FETCH_CONTACT,
-    FETCH_CLIENTS,
-    FETCH_CLIENTSLIST,
-    FETCH_EVENTLIST,
-    FETCH_EVENTDETAIL
-} from "./types";
+import { FETCH_POSTS, FETCH_CONTACT, FETCH_CLIENTS, FETCH_CLIENTSLIST, FETCH_EVENTLIST, FETCH_EVENTDETAIL } from "./types";
 
 export const fetchPosts = () => {
     return dispatch => {
         const body = {
             page: 1
         };
-
         fetch("http://167.71.231.3/api/artists", {
             method: "POST",
             body: JSON.stringify(body)
@@ -35,7 +27,6 @@ export const fetchContact = () => {
         const body = {
             page: 1
         };
-
         fetch("https://167.71.231.3/api/contactus", {
             method: "POST",
             body: JSON.stringify(body)
@@ -52,6 +43,7 @@ export const fetchContact = () => {
             });
     };
 };
+
 export const fetchClients = () => {
     return dispatch => {
         const body = {
