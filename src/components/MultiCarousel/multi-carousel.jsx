@@ -37,7 +37,6 @@ class multiCarouselHero extends Component {
 			<section className="section-padding-two artist-lineup">
 				<div className="tim-container clearfix">
 					<ul>
-
 						{posts.length > 0
 							? posts.map(item => {
 								return (
@@ -58,7 +57,6 @@ class multiCarouselHero extends Component {
 								);
 							})
 							: ""}
-
 					</ul>
 				</div>
 			</section>
