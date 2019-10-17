@@ -28,13 +28,13 @@ class PlayerHero extends Component{
                 songs: [
                 {
                     position: '1',
-                    songName: 'foo',
+                    songName: 'first',
                     songUrl: 'http://www.hochmuth.com/mp3/Haydn_Cello_Concerto_D-1.mp3'
                 },
                 {
                     position: '2',
-                    songName: 'bar',
-                    songUrl: 'path/to/songUrl'
+                    songName: 'Two',
+                    songUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3'
                 },
                 {
                     position: '3',
@@ -84,7 +84,7 @@ class PlayerHero extends Component{
                                         <button class="tim-btn">Share</button>
                                     </div> */}
 
-                                    <AudioPlayer currentPlayList={this.state.currentPlayList} />
+                                    {/* <AudioPlayer currentPlayList={this.state.currentPlayList} /> */}
 
                                    
                                     <div className="jp-playlist style-fullwidth">

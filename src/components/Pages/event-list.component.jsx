@@ -20,19 +20,19 @@ class EventList extends Component{
         const data = events.result;
         return (
             <div>
-            <section className="page-header artist-banner">
-            <div className="tim-container">
-                <div className="page-header-title text-center">
-                <h2>Events</h2>
-                </div>
+                <section className="page-header artist-banner">
+                <div className="tim-container">
+                    <div className="page-header-title text-center">
+                    <h2>Events</h2>
+                    </div>
 
-                <div className="breadcrumbs">
-                <Link to="/index">Home</Link>
-                <span>/</span>
-                <span>Events</span>
+                    <div className="breadcrumbs">
+                    <Link to="/index">Home</Link>
+                    <span>/</span>
+                    <span>Events</span>
+                    </div>
                 </div>
-            </div>
-            </section>
+                </section>
                 <section className="blog-posts">
                     <div className="container">
                     {data && data.length > 0 && (

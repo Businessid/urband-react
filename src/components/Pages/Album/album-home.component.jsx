@@ -1,72 +1,125 @@
-import React , {Component} from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import StoreHeader from '../../StoreHeader/header.component'
-import ProductListHero from '../../ListingGrid/product-list-hero.component'
+import ProductListHero from '../../ListingGrid/product-list-hero.component';
+import { connect } from "react-redux";
+import * as actionCreators from "../../../../src/store/actions/";
+// import '../../ListingGrid/'
 
 library.add(faPlay)
 
-class AlbumHome extends Component{
-    state={
-        artist:[
-            {id:1,name:'John Lenon',released:"22-12-2018"},
-            {id:2,name:'Fun',released:"22-12-2018"},
-            {id:3,name:'Fun',released:"22-12-2018"},
-            {id:4,name:'Fun',released:"22-12-2018"}
-        ]
+class AlbumHome extends Component {
+    componentDidMount() {
+        this.props.fetchAlbums();
     }
 
-    render(){
-        
+    render() {
+        const image_url = "http://167.71.231.3/storage/"
+        const albums = this.props.albums;
 
         return (
-           
-         <div>
-            <section className="page-header artist-banner">
-                <div className="tim-container">
-                    <div className="page-header-title text-center">
-                    <h2>Album List</h2>
-                    </div>
 
-                    <div className="breadcrumbs">
-                    <Link to="/index">Home</Link>
-                        <span>/</span>
-                        <span>Albums</span>
-                    </div>
-                </div>
-            </section>	
-      
+            <div>
+                <section className="page-header artist-banner">
+                    <div className="tim-container">
+                        <div className="page-header-title text-center">
+                            <h2>Album List</h2>
+                        </div>
 
-        <section className="section-hero">
-            <div className="container">
-                <div className="row album-listing">
-                    <StoreHeader/>
-                    {this.state.artist.map((item) => 
-                    <div className="col-md-3 col-sm-6 col-12 artist-thump"  key={item.id}>
-                        <ProductListHero 
-                        >
-                            <div>By <b>{item.name}</b></div>
-                            <div>Released on <b>{item.released}</b></div>
-                            <Link to={"/albums/detail/heaven"} className="play-btn-round"><FontAwesomeIcon icon={faPlay} /></Link>
-                        </ProductListHero>
+                        <div className="breadcrumbs">
+                            <Link to="/index">Home</Link>
+                            <span>/</span>
+                            <span>Albums</span>
+                        </div>
                     </div>
-                    )}
- 
-                    
-                    
-                </div>
-            </div>        
-        </section>     
-		</div>
-           
-           
+                </section>
+
+
+                <section className="section-hero">
+                    <div className="container">
+                        <div className="row album-listing">
+                            <StoreHeader />
+
+                            <div className="product">
+                                <div className="product-thumb">
+                                    <img className="img-responsive" alt="Product Thumb" />
+                                    <div className="product-thumb-hover">
+                                        <div className="btn-cart"><Link to="/">Add to Cart</Link></div>
+                                    </div>
+                                </div>
+                                <div className="product-detail">
+                                    <h4 className="product-name">Music Album</h4>
+                                    <p className="product-price">$15</p>
+                                    <div className="detail">
+                                        {this.props.children}
+                                    </div>
+                                </div>
+                            </div>
+                            {albums.length > 0
+                                ? albums.map(item => {
+                                    return (
+                                        <div className="product" key={item.id}>
+                                            <div className="product-thumb">
+                                                <img className="img-responsive" src={image_url + item.image} alt="Product Thumb" />
+                                                <div className="product-thumb-hover">
+                                                    <div className="btn-cart"><Link to="/">Add to Cart</Link></div>
+                                                </div>
+                                                <Link to={"/albums/detail/heaven"} className="play-btn-round"><FontAwesomeIcon icon={faPlay} /></Link>
+                                            </div>
+                                            <div className="product-detail">
+                                                <h4 className="product-name">Music Album</h4>
+                                                <div>By <b>{item.name}</b></div>
+                                        <div>Released on <b>{item.released}</b></div>
+                                        
+                                            </div>
+                                        </div>
+                                    );
+                                })
+                                : ""}
+                            {/* {this.state.artist.map((item) =>
+                                <div className="col-md-3 col-sm-6 col-12 artist-thump" key={item.id}>
+                                    <ProductListHero
+                                    >
+                                        <div>By <b>{item.name}</b></div>
+                                        <div>Released on <b>{item.released}</b></div>
+                                        <Link to={"/albums/detail/heaven"} className="play-btn-round"><FontAwesomeIcon icon={faPlay} /></Link>
+                                    </ProductListHero>
+                                </div>
+                            )} */}
+
+
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+
         );
     }
 }
+const mapDispatchToProps = dispatch => {
+    // call action functions
+    return {
+        fetchAlbums: () => dispatch(actionCreators.fetchAlbums())
+    };
+};
 
-export default AlbumHome;
+const mapStateToProps = state => {
+    return {
+        albums: state.albums.items
+    };
+};
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(AlbumHome);
+
+
 
 
 

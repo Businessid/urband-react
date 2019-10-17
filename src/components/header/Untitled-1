@@ -1,8 +1,0 @@
-display: block;
-    position: relative !important;
-    margin-bottom: 7px;
-    width: 93%;
-    height: 2px !important;
-    background-color: #fff !important;
-    transition: all 0.25s ease-in-out;
-}

@@ -3,9 +3,11 @@ import postReducer from './postReducer'; // here postReducer is like State inclu
 import clientReducer from './clientReducer';
 import clientsListReducer from './clientsListReducer';
 import eventListReducer from './eventListReducer';
+import albumReducer from './albumReducer';
 export default combineReducers({
     posts: postReducer, // choose any name
     clients: clientReducer,
     clientslist: clientsListReducer,
-    events: eventListReducer
+    events: eventListReducer,
+    albums:albumReducer,
 })
