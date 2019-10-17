@@ -84,7 +84,7 @@ class PlayerHero extends Component{
                                         <button class="tim-btn">Share</button>
                                     </div> */}
 
-                                    <AudioPlayer currentPlayList={this.state.currentPlayList} />
+                                    {/* <AudioPlayer currentPlayList={this.state.currentPlayList} /> */}
 
                                    
                                     <div className="jp-playlist style-fullwidth">
