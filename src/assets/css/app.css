@@ -16731,4 +16731,23 @@ ul.products li.product-two .ajax_add_to_cart i {
 /*--------------------------------------------------------------
   ## Vlog
   --------------------------------------------------------------*/
-  
+  .list-blog {
+    padding: 20px;
+}
+  .list-index{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+.progression-podcast-index-content {
+  padding: 50px 35px 50px 35px;
+  position: relative;
+    z-index: 10;
+}
+.progression-studios-podcast-index-border-top {
+  background: rgba(255,255,255,0.25);
+  height: 10px;
+    border-radius: 30px;
+    margin-bottom: 15px;
+}

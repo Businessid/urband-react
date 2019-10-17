@@ -16,6 +16,7 @@ import Clients from './components/Pages/clients.component'
 import Gallery from './components/Pages/gallery.component'
 import AlbumHome from './components/Pages/Album/album-home.component'
 import AlbumDetail from './components/Pages/Album/album-detail.component'
+import Vlog from './components/Pages/vlog.component'
 import Radio from './components/Pages/radio.component'
 import ShopHome from './components/Pages/Store/home.component'
 import Tickets from './components/Pages/ticket.component'
@@ -63,6 +64,7 @@ class App extends Component{
                 <Route path="/coming-soon" component={ComingSoon} />
                 <Route path="/albums" exact component={ AlbumHome } />
                 <Route path={"/albums/detail/:id"} component={ AlbumDetail} />
+                <Route path="/vlog" component={ Vlog} />
               
                 <HomePage/>
                 <WhoWeAre/>
