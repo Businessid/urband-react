@@ -46,7 +46,7 @@ class Header extends Component{
                         </li>
                     
                         <li>
-                        <Link  to="/coming-soon"  className="in-array">Vlog</Link>
+                        <NavLink  exact to="/coming-soon"  className="in-array">Vlog</NavLink>
                             
                         </li>
                         <li><NavLink  to="/gallery" activeClassName="selected" className="in-array">Gallery</NavLink></li>

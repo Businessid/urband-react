@@ -1,4 +1,6 @@
 
+
+
 import React, { Component } from 'react'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -36,30 +38,31 @@ class multiCarouselHero extends Component {
 		return (
 			<section className="section-padding-two artist-lineup">
 				<div className="tim-container clearfix">
-					<ul>
-
-						{posts.length > 0
-							? posts.map(item => {
-								return (
-									<Carousel responsive={responsive}>
-										<li className="artist-single clearfix swiper-slide">
-											<img
-												src={item.image_url + "/" + item.image}
-												className="ink-pattern"
-												alt="Album"
-											/>
-											<div className="artist-single-content">
-
-												<h6>{item.name}</h6>
-												<p>Band: Metallica</p>
-											</div>
-										</li>
-									</Carousel>
-								);
-							})
-							: ""}
-
-					</ul>
+				{posts && posts.length > 0 && (
+                      <Carousel
+                        responsive={responsive}
+                        showDots={true}
+                        arrows={false}
+                        dotListClass="custom-dot-list-style"
+                      >
+						  
+                        {posts.map(item => {
+                          return (
+                            <div className="artist-single clearfix swiper-slide">
+								<img
+									src={item.image_url + "/" + item.image}
+									className="ink-pattern"
+									alt="Album"
+								/>
+								<div className="artist-single-content">
+									<h6>{item.name}</h6>
+									<p>Band: Metallica</p>
+								</div>
+								</div>
+                          );
+                        })}
+                      </Carousel>
+                    )}
 				</div>
 			</section>
 
