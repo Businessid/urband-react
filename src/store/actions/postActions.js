@@ -13,7 +13,7 @@ export const fetchPosts = () => {
             .then(res => {
                 dispatch({
                     type: FETCH_POSTS,
-                    value: res
+                    value: res.result
                 });
             })
             .catch(error => {

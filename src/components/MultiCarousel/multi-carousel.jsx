@@ -12,7 +12,9 @@ class multiCarouselHero extends Component {
 	}
 
 	render() {
+		const image_url = "http://167.71.231.3/storage/"
 		const posts = this.props.posts;
+		
 		const responsive = {
 			superLargeDesktop: {
 				// the naming can be any, depends on you.
@@ -45,7 +47,7 @@ class multiCarouselHero extends Component {
                           return (
                             <div className="artist-single home-page">
 								<img
-									src={item.image_url + "/" + item.image}
+									src={image_url + "/" + item.image}
 									className="ink-pattern"
 									alt="Album"
 								/>
