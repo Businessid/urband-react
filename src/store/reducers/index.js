@@ -5,11 +5,13 @@ import clientsListReducer from './clientsListReducer';
 import eventListReducer from './eventListReducer';
 import albumReducer from './albumReducer';
 import albumdetailsReducer from './albumdetailsReducer'
+import homeBannerReducer from './homeBannerReducer';
 export default combineReducers({
     posts: postReducer, // choose any name
     clients: clientReducer,
     clientslist: clientsListReducer,
     events: eventListReducer,
     albums:albumReducer,
-    albumdetails:albumdetailsReducer
+    albumdetails:albumdetailsReducer,
+    homebanner:homeBannerReducer
 })

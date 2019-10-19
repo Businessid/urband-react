@@ -68,6 +68,9 @@ class AlbumHome extends Component {
                                     );
                                 })
                                 : ""}
+
+
+                                
                             {/* {this.state.artist.map((item) =>
                                 <div className="col-md-3 col-sm-6 col-12 artist-thump" key={item.id}>
                                     <ProductListHero

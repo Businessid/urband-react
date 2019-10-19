@@ -1,46 +1,65 @@
-import React  from 'react';
-import sliderHeroimg1 from '../../media/background/mouse-move.png';
+import React from "react";
+//import sliderHeroimg1 from '../../media/background/mouse-move.png';
+import { connect } from "react-redux";
+import * as actionCreators from "../../../src/store/actions";
+
+class sliderHero extends React.Component {
+  componentDidMount() {
+    this.props.fetchHomeBanner();
+  }
+
+  render() {
+    const image_url = "http://167.71.231.3/storage/";
+    const homebanner = this.props.homebanner;
+    console.log("log", homebanner);
+    
+    let styles = {
+      backgroundImage: 'url(' + image_url + homebanner.image + ')'
+    };
 
 
-class sliderHero extends React.Component{
-
-
-    render(){
-        return (    
-          <section className="banner-five">
-            <div className="tim-container">
-              <div id="para" className="paralax">
-                <div id="paralax-1" className="scene">
-                  <div> <img src={sliderHeroimg1} alt="banner"/></div>
-                </div>
+    return (
+      <section className="banner-five" style={styles}>
+        <div className="tim-container">
+         
+          {/* <div> <img src={image_url + homebanner.image} alt="banner" /></div> */}
+          <div className="baneer-five-content"> 
+            <div className="content sp-container">
+              <div className="sp-content">
+                <div className="sp-globe"></div>
+                <h2 className="frame-1">MILANDO</h2>
+                <h2 className="frame-2">JOHN LENNON</h2>
+                <h2 className="frame-3">PAUL McKART</h2>
+                <h2 className="frame-4">GEORGE HARRIS</h2>
               </div>
-              <div className="baneer-five-content">
-                <div className="content sp-container">
-                  <div className="sp-content">
-                    <div className="sp-globe"></div>
-                    <h2 className="frame-1">MILANDO</h2>
-                    <h2 className="frame-2">JOHN LENNON</h2>
-                    <h2 className="frame-3">PAUL McKART</h2>
-                    <h2 className="frame-4">GEORGE HARRIS</h2>
-
-                  </div>
-                  <h3>DYNNEX HALL - March 17, 2018</h3>
-                  <a className="tim-slide-btn" href="index.html#">TICKETS</a>
-                </div>
-              </div>
-            
+              <h3>DYNNEX HALL - March 17, 2018</h3>
+              <a className="tim-slide-btn" href="index.html#">
+                TICKETS
+              </a>
             </div>
-
+          </div>
+        </div>
 
         <div className="smoke-wrqpper">
           <canvas id="canvas"></canvas>
         </div>
-
-</section>
-                      
-        
-        );
-    }
+      </section>
+    );
+  }
 }
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchHomeBanner: () => dispatch(actionCreators.fetchHomeBanner())
+  };
+};
 
-export default sliderHero;
+const mapStateToProps = state => {
+  return {
+    homebanner: state.homebanner.items
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(sliderHero);
