@@ -1,10 +1,7 @@
 
-
-
 import React, { Component } from 'react'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import artist1 from '../../media/artist/1.jpg';
 import { connect } from "react-redux";
 import * as actionCreators from "../../../src/store/actions/";
 
@@ -41,14 +38,12 @@ class multiCarouselHero extends Component {
 				{posts && posts.length > 0 && (
                       <Carousel
                         responsive={responsive}
-                        showDots={true}
-                        arrows={false}
-                        dotListClass="custom-dot-list-style"
+                        arrows={true}
                       >
 						  
                         {posts.map(item => {
                           return (
-                            <div className="artist-single clearfix swiper-slide">
+                            <div className="artist-single home-page">
 								<img
 									src={item.image_url + "/" + item.image}
 									className="ink-pattern"

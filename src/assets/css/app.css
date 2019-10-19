@@ -2015,12 +2015,14 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .banner-five {
-  height: 840px;
+  height: 750px;
+  background-position: center;
+  background-size: cover;
   position: relative;
   overflow: hidden;
 
 }
-.banner-five::before {
+/* .banner-five::before {
   background: url("../../media/background/bg5.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -2031,7 +2033,7 @@ h1, h2, h3, h4, h5, h6 {
   content: '';
   bottom: 0;
   left: 0;
-}
+} */
 
 .banner-five::after {
   position: absolute;
@@ -15627,6 +15629,11 @@ ul.products li.product-two .ajax_add_to_cart i {
   position: relative;
   z-index: 1;
   overflow: hidden;
+}
+.artist-single.home-page{
+  width: 443px;
+  height: 443px;
+  margin: 0 auto;
 }
 
 .artist-single:before {
