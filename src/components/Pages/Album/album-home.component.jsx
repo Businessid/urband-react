@@ -18,7 +18,6 @@ class AlbumHome extends Component {
     render() {
         const image_url = "http://167.71.231.3/storage/"
         const albums = this.props.albums;
-        console.log("yyyyyyy", albums);
 
         return (
 

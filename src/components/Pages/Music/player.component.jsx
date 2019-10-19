@@ -50,7 +50,9 @@ class PlayerHero extends Component{
       }
  
     render(){ 
-
+        const image_url = "http://167.71.231.3/storage/"
+        const album = this.props.value;
+        const track = album.tracks;
         const responsive = {
             superLargeDesktop: {
               // the naming can be any, depends on you.
@@ -92,19 +94,15 @@ class PlayerHero extends Component{
                                             <h2>Track <span>List</span></h2>
                                         </div>
                                     <ul>
-                                        <li className="jp-playlist-current style-fullwidth">
-                                            <div className="jp-album-me"><div className="cell-play-icons"><FontAwesomeIcon icon={faPlay} /></div><Link  className="jp-playlist-item jp-playlist-current">Happy Life 02 sdfsf<span className="jp-artist">by Derwood Spinks</span></Link></div>
-                                        </li>
-                                        <li className="jp-playlist-current style-fullwidth">
-                                            <div className="jp-album-me"><div className="cell-play-icons"><FontAwesomeIcon icon={faPlay} /></div><Link  className="jp-playlist-item jp-playlist-current">King Magicians <span className="jp-artist">by Derwood Spinks</span></Link></div>
-                                        </li>
-                                        <li className="jp-playlist-current style-fullwidth">
-                                            <div className="jp-album-me"><div className="cell-play-icons"><FontAwesomeIcon icon={faPlay} /></div><Link  className="jp-playlist-item jp-playlist-current">Leaving it Behind <span className="jp-artist">by Derwood Spinks</span></Link></div>
-                                        </li>
-                                        <li className="jp-playlist-current style-fullwidth">
-                                            <div className="jp-album-me"><div className="cell-play-icons"><FontAwesomeIcon icon={faPlay} /></div><Link  className="jp-playlist-item jp-playlist-current">Happy Life 02 sdfsf<span className="jp-artist">by Derwood Spinks</span></Link></div>
-                                        </li>
-
+                                      
+                                        {track ? track.map(item => {
+                                            return (
+                                                <li className="jp-playlist-current style-fullwidth">
+                                                <div className="jp-album-me"><div className="cell-play-icons"><FontAwesomeIcon icon={faPlay} /></div><Link  className="jp-playlist-item jp-playlist-current">{item.name}<span className="jp-artist">by Derwood Spinks</span></Link></div>
+                                            </li>
+                                            );
+                                        })
+                                            : ""}
                                         
                                     </ul>
                                 </div>
@@ -122,7 +120,7 @@ class PlayerHero extends Component{
                                 <h2>RELATED <span>ALBUM</span></h2>
                             </div>
                             <Carousel responsive={responsive}>
-                                <li className=" clearfix swiper-slide ">
+                                <div className=" clearfix swiper-slide ">
                                     <div className="single-related-album">
                                     
                                     <img src={require('../../../media/album/ra1.jpg')} alt=""/>
@@ -135,77 +133,9 @@ class PlayerHero extends Component{
                                             <Link  className="play-bottom"> <FontAwesomeIcon icon={faPlay} /></Link>
                                         </div>
                                     </div>
-                                </li>
-                                <li className=" clearfix swiper-slide ">
-                                    <div className="single-related-album">
-                                    
-                                    <img src={require('../../../media/album/ra1.jpg')} alt=""/>
-                                
-                                        <div className="single-related-prod-bottom">
-                                            <div className="left">
-                                                <Link>Funny Litle World</Link>
-                                                <p>6 Tracks</p>
-                                            </div>
-                                            <Link  className="play-bottom"> <FontAwesomeIcon icon={faPlay} /></Link>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li className=" clearfix swiper-slide ">
-                                    <div className="single-related-album">
-                                        
-                                    <img src={require('../../../media/album/ra2.jpg')} alt=""/>
-                                
-                                        <div className="single-related-prod-bottom">
-                                            <div className="left">
-                                                <Link>Funny Litle World</Link>
-                                                <p>6 Tracks</p>
-                                            </div>
-                                            <Link  className="play-bottom"> <FontAwesomeIcon icon={faPlay} /></Link>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li className=" clearfix swiper-slide ">
-                                    <div className="single-related-album">
-                                        
-                                    <img src={require('../../../media/album/ra3.jpg')} alt=""/>
-                                
-                                        <div className="single-related-prod-bottom">
-                                            <div className="left">
-                                                <Link>Funny Litle World</Link>
-                                                <p>6 Tracks</p>
-                                            </div>
-                                            <Link className="play-bottom"> <FontAwesomeIcon icon={faPlay} /></Link>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li className=" clearfix swiper-slide ">
-                                    <div className="single-related-album">
-                                    
-                                    <img src={require('../../../media/album/ra4.jpg')} alt=""/>
-                            
-                                        <div className="single-related-prod-bottom">
-                                            <div className="left">
-                                                <Link>Funny Litle World</Link>
-                                                <p>6 Tracks</p>
-                                            </div>
-                                            <Link  className="play-bottom"> <FontAwesomeIcon icon={faPlay} /></Link>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li className=" clearfix swiper-slide ">
-                                    <div className="single-related-album">
-                                    
-                                    <img src={require('../../../media/album/ra4.jpg')} alt=""/>
-                            
-                                        <div className="single-related-prod-bottom">
-                                            <div className="left">
-                                                <Link>Funny Litle World</Link>
-                                                <p>6 Tracks</p>
-                                            </div>
-                                            <Link  className="play-bottom"> <FontAwesomeIcon icon={faPlay} /></Link>
-                                        </div>
-                                    </div>
-                                </li>
+                                </div>
+                              
+                               
                             </Carousel>
                         </div>    
                         </div>

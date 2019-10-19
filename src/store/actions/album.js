@@ -26,12 +26,12 @@ export const fetchAlbums = () => {
 };
 
 export const fetchAlbumsDetails = (id) => {
-    console.log("resssssssssss");
+    console.log("resssssssssss", id);
     return dispatch => {
         const body = {
             albumid: id
         };
-        fetch("http://127.0.0.1:8000/api/albumdetails", {
+        fetch("http://167.71.231.3/api/albumdetails", {
             method: "POST",
             body: JSON.stringify(body)
         })
@@ -39,7 +39,7 @@ export const fetchAlbumsDetails = (id) => {
             .then(res => {
                 dispatch({
                     type: FETCH_ALBUMSDETAILS,
-                    value: res
+                    value: res.result
                 });
             })
             .catch(error => {
