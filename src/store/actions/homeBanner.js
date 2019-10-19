@@ -7,7 +7,7 @@ export const fetchHomeBanner = () => {
         })
             .then(res => res.json())
             .then(res => {
-                console.log("response", res.result[0]);
+                //console.log("response", res.result[0]);
                 
                 dispatch({
                     type: FETCH_HOMEBANNER,
