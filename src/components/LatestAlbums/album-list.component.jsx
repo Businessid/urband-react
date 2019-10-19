@@ -13,6 +13,8 @@ class albumListHome extends Component {
      render() {
           const image_url = "http://167.71.231.3/storage/"
           const albums = this.props.albums;
+          console.log("gggggggggg", albums);
+          
           return (
                <section className="three-d-album">
                     <div className="section-title style-four">

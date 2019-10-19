@@ -1,4 +1,4 @@
-import {FETCH_ALBUMS} from "./types";
+import {FETCH_ALBUMS, FETCH_ALBUMSDETAILS} from "./types";
 
 export const fetchAlbums = () => {
     console.log("resssssssssss");
@@ -12,9 +12,11 @@ export const fetchAlbums = () => {
         })
             .then(res => res.json())
             .then(res => {
+                console.log("resultttt", res);
+                
                 dispatch({
                     type: FETCH_ALBUMS,
-                    value: res
+                    value: res.result
                 });
             })
             .catch(error => {
@@ -23,4 +25,26 @@ export const fetchAlbums = () => {
     };
 };
 
+export const fetchAlbumsDetails = (id) => {
+    console.log("resssssssssss");
+    return dispatch => {
+        const body = {
+            albumid: id
+        };
+        fetch("http://127.0.0.1:8000/api/albumdetails", {
+            method: "POST",
+            body: JSON.stringify(body)
+        })
+            .then(res => res.json())
+            .then(res => {
+                dispatch({
+                    type: FETCH_ALBUMSDETAILS,
+                    value: res
+                });
+            })
+            .catch(error => {
+                console.log("error" + JSON.stringify(error));
+            });
+    };
+};
 
