@@ -4,7 +4,6 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import StoreHeader from '../../StoreHeader/header.component'
-import ProductListHero from '../../ListingGrid/product-list-hero.component';
 import { connect } from "react-redux";
 import * as actionCreators from "../../../../src/store/actions/";
 // import '../../ListingGrid/'
@@ -19,6 +18,7 @@ class AlbumHome extends Component {
     render() {
         const image_url = "http://167.71.231.3/storage/"
         const albums = this.props.albums;
+        console.log("yyyyyyy", albums);
 
         return (
 
@@ -43,37 +43,26 @@ class AlbumHome extends Component {
                         <div className="row album-listing">
                             <StoreHeader />
 
-                            <div className="product">
-                                <div className="product-thumb">
-                                    <img className="img-responsive" alt="Product Thumb" />
-                                    <div className="product-thumb-hover">
-                                        <div className="btn-cart"><Link to="/">Add to Cart</Link></div>
-                                    </div>
-                                </div>
-                                <div className="product-detail">
-                                    <h4 className="product-name">Music Album</h4>
-                                    <p className="product-price">$15</p>
-                                    <div className="detail">
-                                        {this.props.children}
-                                    </div>
-                                </div>
-                            </div>
                             {albums.length > 0
                                 ? albums.map(item => {
                                     return (
                                         <div className="product" key={item.id}>
                                             <div className="product-thumb">
                                                 <img className="img-responsive" src={image_url + item.image} alt="Product Thumb" />
-                                                <div className="product-thumb-hover">
+                                                {/* <Link to={'/albums/detail/heaven/${item.id}'} className="play-btn-round"><FontAwesomeIcon icon={faPlay} /></Link> */}
+                                                {/* <div className="product-thumb-hover">
                                                     <div className="btn-cart"><Link to="/">Add to Cart</Link></div>
-                                                </div>
-                                                <Link to={"/albums/detail/heaven"} className="play-btn-round"><FontAwesomeIcon icon={faPlay} /></Link>
+                                                </div> */}
+                                                <Link
+                                                    to={{
+                                                        pathname: `/albums/detail/heaven/${item.id}`
+                                                    }} className="play-btn-round"><FontAwesomeIcon icon={faPlay} /></Link>
                                             </div>
                                             <div className="product-detail">
                                                 <h4 className="product-name">Music Album</h4>
-                                                <div>By <b>{item.name}</b></div>
-                                        <div>Released on <b>{item.released}</b></div>
-                                        
+                                                <div>By <b>{item.title}</b></div>
+                                                <div>Released on <b>{item.created_at}</b></div>
+
                                             </div>
                                         </div>
                                     );
