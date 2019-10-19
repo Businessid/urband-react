@@ -7253,7 +7253,7 @@ ul.comment-list .comment-body .reply a:hover {
 .album-feature:after{
     position: absolute;
     content: '';
-    height: 299px;
+    height: 145px;
     width: 100%;
     z-index: -1;
     opacity: 0.77;
@@ -7265,8 +7265,8 @@ ul.comment-list .comment-body .reply a:hover {
 }
 .album-feature.right:after{
   background-position: right;
-  right: 65px;
-  top: -178px;
+  right: 40px;
+  top: -85px;
 }
 .album-feature.left:after{
   background-position: left;
