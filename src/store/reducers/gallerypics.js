@@ -1,12 +1,12 @@
-import { FETCH_ALBUMS} from '../actions/types';
+import { FETCH_GALLERYPICS} from '../actions/types';
 
 const initialState ={
     items:[]
 }
 
-const albumReducer = (state = initialState, action) => {
+const gallerypics = (state = initialState, action) => {
   switch(action.type){
-      case FETCH_ALBUMS:
+      case FETCH_GALLERYPICS:
           return{
               ...state,
            
@@ -17,5 +17,5 @@ const albumReducer = (state = initialState, action) => {
   }  
 }
 
-export default albumReducer;
+export default gallerypics;
 

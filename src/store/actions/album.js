@@ -1,7 +1,6 @@
-import {FETCH_ALBUMS, FETCH_ALBUMSDETAILS} from "./types";
+import {FETCH_ALBUMS, FETCH_ALBUMSDETAILS, FETCH_GALLERYPICS} from "./types";
 
 export const fetchAlbums = () => {
-    console.log("resssssssssss");
     return dispatch => {
         const body = {
             page: 1
@@ -12,10 +11,29 @@ export const fetchAlbums = () => {
         })
             .then(res => res.json())
             .then(res => {
-                console.log("resultttt", res);
-                
                 dispatch({
                     type: FETCH_ALBUMS,
+                    value: res.result
+                });
+            })
+            .catch(error => {
+            });
+    };
+};
+
+export const fetchAlbumsDetails = (id) => {
+    return dispatch => {
+        const body = {
+            albumid: id
+        };
+        fetch("http://167.71.231.3/api/albumdetails", {
+            method: "POST",
+            body: JSON.stringify(body)
+        })
+            .then(res => res.json())
+            .then(res => {
+                dispatch({
+                    type: FETCH_ALBUMSDETAILS,
                     value: res.result
                 });
             })
@@ -24,22 +42,22 @@ export const fetchAlbums = () => {
             });
     };
 };
-
-export const fetchAlbumsDetails = (id) => {
-    console.log("resssssssssss");
+export const fetchgallerypics = (id) => {
     return dispatch => {
         const body = {
-            albumid: id
+            "page":"1","category":"1"
         };
-        fetch("http://127.0.0.1:8000/api/albumdetails", {
+        fetch("http://167.71.231.3/api/gallery", {
             method: "POST",
             body: JSON.stringify(body)
         })
             .then(res => res.json())
             .then(res => {
+                console.log("res", res);
+                
                 dispatch({
-                    type: FETCH_ALBUMSDETAILS,
-                    value: res
+                    type: FETCH_GALLERYPICS,
+                    value: res.result
                 });
             })
             .catch(error => {
@@ -47,4 +65,3 @@ export const fetchAlbumsDetails = (id) => {
             });
     };
 };
-

@@ -50,7 +50,9 @@ class PlayerHero extends Component{
       }
  
     render(){ 
-
+        const image_url = "http://167.71.231.3/storage/"
+        const album = this.props.value;
+        const track = album.tracks;
         const responsive = {
             superLargeDesktop: {
               // the naming can be any, depends on you.
@@ -92,19 +94,15 @@ class PlayerHero extends Component{
                                             <h2>Track <span>List</span></h2>
                                         </div>
                                     <ul>
-                                        <li className="jp-playlist-current style-fullwidth">
-                                            <div className="jp-album-me"><div className="cell-play-icons"><FontAwesomeIcon icon={faPlay} /></div><Link  className="jp-playlist-item jp-playlist-current">Happy Life 02 sdfsf<span className="jp-artist">by Derwood Spinks</span></Link></div>
-                                        </li>
-                                        <li className="jp-playlist-current style-fullwidth">
-                                            <div className="jp-album-me"><div className="cell-play-icons"><FontAwesomeIcon icon={faPlay} /></div><Link  className="jp-playlist-item jp-playlist-current">King Magicians <span className="jp-artist">by Derwood Spinks</span></Link></div>
-                                        </li>
-                                        <li className="jp-playlist-current style-fullwidth">
-                                            <div className="jp-album-me"><div className="cell-play-icons"><FontAwesomeIcon icon={faPlay} /></div><Link  className="jp-playlist-item jp-playlist-current">Leaving it Behind <span className="jp-artist">by Derwood Spinks</span></Link></div>
-                                        </li>
-                                        <li className="jp-playlist-current style-fullwidth">
-                                            <div className="jp-album-me"><div className="cell-play-icons"><FontAwesomeIcon icon={faPlay} /></div><Link  className="jp-playlist-item jp-playlist-current">Happy Life 02 sdfsf<span className="jp-artist">by Derwood Spinks</span></Link></div>
-                                        </li>
-
+                                      
+                                        {track ? track.map(item => {
+                                            return (
+                                                <li className="jp-playlist-current style-fullwidth">
+                                                <div className="jp-album-me"><div className="cell-play-icons"><FontAwesomeIcon icon={faPlay} /></div><Link  className="jp-playlist-item jp-playlist-current">{item.name}<span className="jp-artist">by Derwood Spinks</span></Link></div>
+                                            </li>
+                                            );
+                                        })
+                                            : ""}
                                         
                                     </ul>
                                 </div>
