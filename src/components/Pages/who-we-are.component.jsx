@@ -7,12 +7,25 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faMixcloud} from '@fortawesome/free-brands-svg-icons' 
 import { faGlassCheers,faMicrophone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { connect } from "react-redux";
+import * as actionCreators from "../../../src/store/actions/";
 
 library.add(faGlassCheers,faMixcloud,faMicrophone)
 class WhoWeAre extends Component{
-
+    constructor() {
+        super()
+        //this.state = {Gang: {}}
+      }
+    componentDidMount() {
+        this.props.fetchWhoWeAre();
+    }
 
     render(){
+        const image_url = "http://167.71.231.3/storage/"
+        const detail = this.props.detail;
+        const whoweare = detail.whoweare;
+        //const {Gang} = this.state;
+        //const about = atob(whoweare.description);
 
         return (
 
@@ -38,17 +51,15 @@ class WhoWeAre extends Component{
 				<div className="container">
 					<div className="row">
 						<div className="section-title style-four">
-						<h2>LONG STORY SHORT</h2>
-						<p>Melbourne is the coastal capital of the southeastern Australian state of Victoria. At the city's centre is the modern Federation Square development,
-							 with plazas, bars, and restaurants by the Yarra River. In the Southbank area, 
-							the Melbourne Arts Precinct is the site of Arts Centre Melbourne and the National Gallery of Victoria, with Australian and indigenous art..</p>
+						<h2>{whoweare ? whoweare.title : ""}</h2>
+						<p>{whoweare ? whoweare.description : ""}</p>
 						<Link to="/" className="tim-btn hero">Subscribe Us</Link>
 						</div>
 					</div>
 					<div className="row">
 						<div className="col-12 text-center">
                         <div className="band-img">
-                            <img className="img-responsive"src={require('../../media/about/about.jpg')} alt="About Band"/>
+                            <img className="img-responsive" src={whoweare ? image_url + "/" + whoweare.image : ""} alt="About Band"/>
                         </div>
                     </div>
 						</div>
@@ -103,7 +114,23 @@ class WhoWeAre extends Component{
     }
 }
 
-export default WhoWeAre;
+const mapDispatchToProps = dispatch => {
+    // call action functions
+    return {
+        fetchWhoWeAre: () => dispatch(actionCreators.fetchWhoWeAre())
+    };
+};
+
+const mapStateToProps = state => {
+    return {
+        detail: state.whoweare.items
+    };
+};
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(WhoWeAre);
 
 
 

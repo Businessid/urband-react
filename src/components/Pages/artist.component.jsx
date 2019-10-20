@@ -10,6 +10,7 @@ class Artist extends Component {
   }
 
   render() {
+    const image_url = "http://167.71.231.3/storage/"
     const posts = this.props.posts;
     return (
       <div>
@@ -86,7 +87,7 @@ class Artist extends Component {
                         <div className="col-lg-6">
                           <div className="album-feature right">
                             <img
-                              src={item.image_url + "/" + item.image}
+                              src={image_url + "/" + item.image}
                               className="ink-pattern"
                               alt="Album"
                             />

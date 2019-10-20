@@ -1,11 +1,16 @@
 import React , {Component} from 'react';
 import Coverflow from 'react-coverflow';
 import { StyleRoot } from 'radium';
+import { connect } from "react-redux";
+import * as actionCreators from "../../../src/store/actions/";
 
 class Gang extends Component{
 
-
     render(){
+
+        const image_url = "http://167.71.231.3/storage/"
+        const detail = this.props.detail;
+        const gang = detail.gang;
 
         return (
             <div>
@@ -15,30 +20,44 @@ class Gang extends Component{
                     <h2>Meet Our Gang</h2>
                     <p>There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some injected humour.</p>
                 </div>
-                <StyleRoot>
-                    <Coverflow
-                    displayQuantityOfSide={2}
-                    navigation={false}
-                    enableHeading={true}
-                    clickable={true}
-                    active={0}
-                    media={{
-                        '@media (max-width: 900px)': {
-                        width: '600px',
-                        height: '300px'
-                        },
-                        '@media (min-width: 900px)': {
-                        width: '960px',
-                        height: '600px'
-                        }
-                    }}
-                    >   
-                    <img src={require('../../media/artist/a4.jpg')} alt="Arthur Melo"/>
-                    <img src={require('../../media/artist/a1.jpg')} alt="Chester"/>
-                    <img src={require('../../media/artist/a2.jpg')} alt="Zappa Costa"/>
-                    <img src={require('../../media/artist/a3.jpg')} alt="John Lenon"/>
-                    </Coverflow>
+                
+
+
+                {gang && gang.length > 0 && (
+                      <StyleRoot>
+                      <Coverflow
+                      displayQuantityOfSide={2}
+                      navigation={false}
+                      enableHeading={true}
+                      clickable={true}
+                      active={0}
+                      media={{
+                          '@media (max-width: 900px)': {
+                          width: '600px',
+                          height: '300px'
+                          },
+                          '@media (min-width: 900px)': {
+                          width: '960px',
+                          height: '600px'
+                          }
+                      }}
+                      >   
+						  
+                        {gang.map(item => {
+                          return (
+                              <div>
+                            <img src={item ? image_url + item.image : ""} alt=""/>
+                            <p></p>
+                            </div>
+                          );
+                        })}
+                     </Coverflow>
                 </StyleRoot>
+                    )}
+
+
+
+
                 </div>
             </section>        
         </div>
@@ -48,7 +67,24 @@ class Gang extends Component{
     }
 }
 
-export default Gang;
+
+const mapDispatchToProps = dispatch => {
+    // call action functions
+    return {
+        fetchWhoWeAre: () => dispatch(actionCreators.fetchWhoWeAre())
+    };
+};
+
+const mapStateToProps = state => {
+    return {
+        detail: state.whoweare.items
+    };
+};
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Gang);
 
 
 

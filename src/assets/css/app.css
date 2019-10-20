@@ -513,12 +513,12 @@ h1, h2, h3, h4, h5, h6 {
   border-color: #e43a90;
 }
 .play-btn-round{
-    width: 46px;
-    height: 46px;
+    width: 39px;
+    height: 39px;
     background: #f7dfe2;
     text-align: center;
     border-radius: 50px;
-    line-height: 48px;
+    line-height: 39px;
     color: #e01e36;
     display: inline-block;
 }
@@ -16656,6 +16656,28 @@ ul.products li.product-two .ajax_add_to_cart i {
   --------------------------------------------------------------*/
 .artist-thump .detail{
   font-size:14px;
+}
+.album-thumb{
+  height: 295px;
+  width: 295px;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.album-thumb:after {
+  background-color:rgba(0, 0, 0,0.33);
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.album-thumb .play-btn-round{
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  z-index: 1;
 }
 .artist-thump .product-price{
   display: none;
