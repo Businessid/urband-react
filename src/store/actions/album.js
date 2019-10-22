@@ -13,7 +13,7 @@ export const fetchAlbums = () => {
             .then(res => {
                 dispatch({
                     type: FETCH_ALBUMS,
-                    value: res.result
+                    value: res
                 });
             })
             .catch(error => {

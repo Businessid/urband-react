@@ -5,10 +5,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './play-animation-component.css'
-import cover from '../../media/album/cover.jpg';
-import record from '../../media/background/record.png';
-import recordshade from '../../media/background/record-shade.png';
-import playerkey from '../../media/background/player-key.png';
+import cover from '../../../media/album/cover.jpg';
+import record from '../../../media/background/record.png';
+import recordshade from '../../../media/background/record-shade.png';
+import playerkey from '../../../media/background/player-key.png';
 
 library.add(faPlay)
 

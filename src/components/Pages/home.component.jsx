@@ -1,13 +1,13 @@
 import React , {Component} from 'react';
-import SliderHero from '../slider/slider.component'
+import SliderHero from '../Pages/slider/slider.component'
 import H5AudioPlayer from '../AudioPlayer/audioplayer.component'
-import MultiCarousel from '../MultiCarousel/artist-lineup.component'
-import MultiCarouselHero from '../MultiCarousel/multi-carousel'
-import PlayAnimation from '../LatestRelease/play-animation.component'
-import AlbumListHome from '../LatestAlbums/album-list.component'
-import PreviousShowHome from '../PreviousShows/previous-show.component'
-import UpcomingShowHome from '../UpcomingShows/upcoming-shows.component'
-import SpotLight from '../SpotLight/spot-light.component'
+import MultiCarousel from '../Urband-MultiCarousel/artist-lineup.component'
+import MultiCarouselHero from '../Urband-MultiCarousel/multi-carousel'
+import PlayAnimation from './LatestRelease/play-animation.component'
+import AlbumListHome from '../Pages/Album/LatestAlbums/album-list.component'
+import PreviousShowHome from '../Pages/PreviousShows/previous-show.component'
+import UpcomingShowHome from '../Pages/UpcomingShows/upcoming-shows.component'
+import SpotLight from '../Pages/SpotLight/spot-light.component'
 
 class HomePage extends Component{
 

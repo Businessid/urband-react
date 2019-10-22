@@ -5,7 +5,7 @@ import clientsListReducer from './clientsListReducer';
 import eventListReducer from './eventListReducer';
 import albumReducer from './albumReducer';
 import albumdetailsReducer from './albumdetailsReducer'
-import homeBannerReducer from './homeBannerReducer';
+import BannerReducer from './BannerReducer';
 import whoWeAreReducer from './whoWeAreReducer';
 import gallerypics from './gallerypics';
 export default combineReducers({
@@ -15,7 +15,7 @@ export default combineReducers({
     events: eventListReducer,
     albums:albumReducer,
     albumdetails:albumdetailsReducer,
-    homebanner:homeBannerReducer,
+    banners:BannerReducer,
     whoweare:whoWeAreReducer,
     gallerypics:gallerypics
 })

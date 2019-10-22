@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ModalVideo from '../VideoModal/video-modal.component';
+import ModalVideo from '../../VideoModal/video-modal.component';
 import './spot-light.component.css'
 class spotLight extends Component {
  
@@ -18,7 +18,7 @@ class spotLight extends Component {
 						<div className="row">
 							<div className="grid-60">
 								<div className="spotlight-inner">
-									<img src={require('../../media/performance/vid-1.jpg')} alt=""/>
+									<img src={require('../../../media/performance/vid-1.jpg')} alt=""/>
 									<div className="video-player-three">
 										
 									

@@ -1,20 +1,20 @@
 import React from "react";
 //import sliderHeroimg1 from '../../media/background/mouse-move.png';
 import { connect } from "react-redux";
-import * as actionCreators from "../../../src/store/actions";
+import * as actionCreators from "../../../../src/store/actions/";
 
 class sliderHero extends React.Component {
   componentDidMount() {
-    this.props.fetchHomeBanner();
+    this.props.fetchBanner();
   }
 
   render() {
     const image_url = "http://167.71.231.3/storage/";
-    const homebanner = this.props.homebanner;
-    console.log("log", homebanner);
+    const getbanner = this.props.banners;
+    console.log("log", getbanner);
     
     let styles = {
-      backgroundImage: 'url(' + image_url + homebanner.image + ')'
+      backgroundImage: 'url(' + image_url + getbanner.image + ')'
     };
 
 
@@ -49,13 +49,13 @@ class sliderHero extends React.Component {
 }
 const mapDispatchToProps = dispatch => {
   return {
-    fetchHomeBanner: () => dispatch(actionCreators.fetchHomeBanner())
+    fetchBanner: () => dispatch(actionCreators.fetchBanner())
   };
 };
 
 const mapStateToProps = state => {
   return {
-    homebanner: state.homebanner.items
+    banners: state.banners.items
   };
 };
 

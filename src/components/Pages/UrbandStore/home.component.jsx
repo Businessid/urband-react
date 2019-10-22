@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import  FilterLeft  from '../Store/filter.component'
-import ProductListHero from '../../ListingGrid/product-list-hero.component'
+import  FilterLeft  from '../../Pages/UrbandStore/filter.component'
+import ProductListHero from '../../Pages/ListingGrid/product-list-hero.component'
 
 class ShopHome extends Component{
 

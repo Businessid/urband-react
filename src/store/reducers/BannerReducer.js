@@ -1,12 +1,12 @@
-import { FETCH_HOMEBANNER } from '../actions/types';
+import { FETCH_BANNER } from '../actions/types';
 
 const initialState ={
     items:[]
 }
 
-const homeBannerReducer = (state = initialState, action) => {
+const BannerReducer = (state = initialState, action) => {
   switch(action.type){
-      case FETCH_HOMEBANNER:
+      case FETCH_BANNER:
           return{
               ...state,
            
@@ -16,5 +16,5 @@ const homeBannerReducer = (state = initialState, action) => {
         return state; 
   }  
 }
-export default homeBannerReducer;
+export default BannerReducer;
 

@@ -7506,7 +7506,7 @@ ul.comment-list .comment-body .reply a:hover {
     z-index: -1;
  } 
  .artist-banner{
-  background: url("../../media/background/7.jpg");
+  /* background: url("../../media/background/7.jpg"); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -16171,6 +16171,14 @@ ul.products li.product-two .ajax_add_to_cart i {
 .the-gang .coverflow__figure__3bk_C{
   backface-visibility: unset;
 }
+.the-gang .coverflow__container__1P-xE h3{
+  font-size: 15px;
+  text-align: center;
+  padding: 5px;
+}
+.the-gang .coverflow__container__1P-xE .coverflow__text__39hqd{
+  display:none;
+}
   /*--------------------------------------------------------------
   ## About
   --------------------------------------------------------------*/
@@ -16695,8 +16703,6 @@ ul.products li.product-two .ajax_add_to_cart i {
   text-align: center;
   line-height: 42px;
 }
-
-
 .album-player .play-btn-large {
   color: #fff;
   background: #f60038;
@@ -16753,9 +16759,6 @@ ul.products li.product-two .ajax_add_to_cart i {
     grid-template-areas:
         ". entry1"
         "entry2 ."
-        ". entry3"
-        "entry4 ."
-        ". entry5";
 }
 /*--------------------------------------------------------------
   ## Vlog

@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import ModalVideo from '../VideoModal/video-modal.component';
+import ModalVideo from '../../VideoModal/video-modal.component';
 import './previous-show.component.css'
 class previousShowHome extends Component{
     render(){
@@ -17,21 +17,21 @@ class previousShowHome extends Component{
 						<div className="show-archive-wrapper row no-gutters">
 							<div className="offset-xs-0 offset-sm-4 col-sm-4 col-6">
 								<div className="single-show-archive">
-									<img src= {require('../../media/album/18.jpg')} alt=""/>
+									<img src= {require('../../../media/album/18.jpg')} alt=""/>
 									<a href="index.html#"><i className="fa fa-link" aria-hidden="true"></i>
 							</a>
 								</div>
 							</div>
 							<div className="col-6 col-sm-4">
 								<div className="single-show-archive">
-									<img src={require('../../media/album/19.jpg')} alt=""/>
+									<img src={require('../../../media/album/19.jpg')} alt=""/>
 									<a href="index.html#"><i className="fa fa-link" aria-hidden="true"></i>
 							</a>
 								</div>
 							</div>
 							<div className="col-xs-12 col-sm-8">
 								<div className="single-show-archive video-archive">
-									<img src={require('../../media/album/20.jpg')} alt=""/>
+									<img src={require('../../../media/album/20.jpg')} alt=""/>
 									<div className="video-player">
 										
 										<div className="text">
@@ -42,13 +42,13 @@ class previousShowHome extends Component{
 									</div>
 								</div>
 							</div>
-							<div className="col-12 col-sm-4">
+							{/* <div className="col-12 col-sm-4">
 								<div className="single-show-archive">
 									<img src="media/album/21.jpg" alt=""/>
 									<a href="index.html#"><i className="fa fa-link" aria-hidden="true"></i>
-	</a>
+									</a>
 								</div>
-							</div>
+							</div> */}
 						</div>
 						
 					</div>

@@ -18,7 +18,7 @@ import AlbumHome from './components/Pages/Album/album-home.component'
 import AlbumDetail from './components/Pages/Album/album-detail.component'
 import Vlog from './components/Pages/vlog.component'
 import Radio from './components/Pages/radio.component'
-import ShopHome from './components/Pages/Store/home.component'
+import ShopHome from './components/Pages/UrbandStore/home.component'
 import Tickets from './components/Pages/ticket.component'
 import ComingSoon from './components/Pages/comingsoon.component'
 import './assets/intro/css/intro.css';

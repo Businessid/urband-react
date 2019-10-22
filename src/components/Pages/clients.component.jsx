@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Carousel from "react-multi-carousel";
+import ComingSoon from "../Pages/comingsoon.component";
+import BannerHero from "../Banners/bannerHero";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,7 +20,9 @@ class Clients extends Component {
     const clients = this.props.clients;
     const clientslist = this.props.clientslist;
     const data = clients.result;
-    const clientdata = clientslist.result; 
+    const clientdata = clientslist.result;
+
+   
 
     const responsive = {
       superLargeDesktop: {
@@ -42,111 +46,124 @@ class Clients extends Component {
 
     return (
       <div>
-        <section className="page-header artist-banner">
-          <div className="tim-container">
-            <div className="page-header-title text-center">
-              <h3>We Have Recorded More than 100+</h3>
-              <h2>Clients</h2>
-            </div>
-
-            <div className="breadcrumbs">
-              <Link to="/">Home</Link>
-              <span>/</span>
-              <span>Clients</span>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <div className="page-padd">
-            <div className="container">
-              <div className="row">
-                <div className="text-center page-head">
-                  What our clients say
-                </div>
-                <div className="client-Wrapper">
-                  <FontAwesomeIcon icon={faQuoteLeft} className="quote left" />
-                  <FontAwesomeIcon
-                    icon={faQuoteRight}
-                    className="quote right"
-                  />
-                  <div className="col-md-12">
-                    {data && data.length > 0 && (
-                      <Carousel
-                        responsive={responsive}
-                        showDots={true}
-                        arrows={false}
-                        dotListClass="custom-dot-list-style"
-                      >
-                        {data.map(item => {
-                          return (
-                            <div className="client-avathar" key={item.id}>
-                              <figure>
-                                <img
-                                    src={clients.image_url + "/" + item.image}
-                                  alt="thumb"
-                                  className="rounded-circle fit-it"
-                                />
-                              </figure>
-                              <p>
-                                Lorem ipsum dolor sit amet consectetur,
-                                adipisicing elit.Eos expedita, doloremque sequi
-                                blanditiis perspiciatis rerum velit maiores
-                                omnis modi voluptate est veniam
-                              </p>
-                              <div className="name">
-                                <span>-</span>  {item.title}
-                              </div>
-                            </div>
-                          );
-                        })}
-                      </Carousel>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="partners-area">
-          <div className="container">
-            <div className="d-flex justify-content-center row">
-              <div className="col-xl-10">
-                <div className="row">
-                  <div className=" col-md-5">
-                    <div className="section-title style-five float-left">
-                      <h2>OUR Clients</h2>
-                      <p>
-                        There are many variations of passages of Lorem Ipsum
-                        available but the majority. We are proud there are many
-                        variations of passages of Lorem Ipsum available.
-                      </p>
+       <BannerHero title={"Client"}/>
+        <div className="fullWrap">
+          {clients.length > 0 ? (
+            <div>
+              <section>
+                <div className="page-padd">
+                  <div className="container">
+                    <div className="row">
+                      <div className="text-center page-head">
+                        What our clients say
+                      </div>
+                      <div className="client-Wrapper">
+                        <FontAwesomeIcon
+                          icon={faQuoteLeft}
+                          className="quote left"
+                        />
+                        <FontAwesomeIcon
+                          icon={faQuoteRight}
+                          className="quote right"
+                        />
+                        <div className="col-md-12">
+                          {data &&
+                            data.length >
+                              0(
+                                <Carousel
+                                  responsive={responsive}
+                                  showDots={true}
+                                  arrows={false}
+                                  dotListClass="custom-dot-list-style"
+                                >
+                                  ?{" "}
+                                  {data.map(item => {
+                                    return (
+                                      <div
+                                        className="client-avathar"
+                                        key={item.id}
+                                      >
+                                        <figure>
+                                          <img
+                                            src={
+                                              clients.image_url +
+                                              "/" +
+                                              item.image
+                                            }
+                                            alt="thumb"
+                                            className="rounded-circle fit-it"
+                                          />
+                                        </figure>
+                                        <p>
+                                          Lorem ipsum dolor sit amet
+                                          consectetur, adipisicing elit.Eos
+                                          expedita, doloremque sequi blanditiis
+                                          perspiciatis rerum velit maiores omnis
+                                          modi voluptate est veniam
+                                        </p>
+                                        <div className="name">
+                                          <span>-</span> {item.title}
+                                        </div>
+                                      </div>
+                                    );
+                                  })}
+                                </Carousel>
+                              )}
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div className="col-md-7">
-                  {clientdata && clientdata.length > 1 && (
-                    <ul className="client-list">
-                    {clientdata.map(item => {
-                          return (
-                            <li key={item.id}>
-                              <img
-                                src={clientslist.image_url + "/" + item.image} 
-                                alt="thumb" className="fit-it"
-                              />
-                            </li>
-                          )
-                    })
-                    }
-                      
-                    </ul>
-                  )}
+                </div>
+              </section>
+
+              <section className="partners-area">
+                <div className="container">
+                  <div className="d-flex justify-content-center row">
+                    <div className="col-xl-10">
+                      <div className="row">
+                        <div className=" col-md-5">
+                          <div className="section-title style-five float-left">
+                            <h2>OUR Clients</h2>
+                            <p>
+                              There are many variations of passages of Lorem
+                              Ipsum available but the majority. We are proud
+                              there are many variations of passages of Lorem
+                              Ipsum available.
+                            </p>
+                          </div>
+                        </div>
+                        <div className="col-md-7">
+                          {clientdata && clientdata.length > 1 && (
+                            <ul className="client-list">
+                              {clientdata.map(item => {
+                                return (
+                                  <li key={item.id}>
+                                    <img
+                                      src={
+                                        clientslist.image_url + "/" + item.image
+                                      }
+                                      alt="thumb"
+                                      className="fit-it"
+                                    />
+                                  </li>
+                                );
+                              })}
+                            </ul>
+                          )}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </section>
             </div>
-          </div>
-        </section>
+          ) :
+           (
+            <div>
+              <ComingSoon />
+            </div>
+          )}
+        </div>
       </div>
     );
   }

@@ -6,10 +6,10 @@
   }
   
   .single-3d {
-    -webkit-box-flex: 0;
+    /* -webkit-box-flex: 0;
         -ms-flex: 0 0 16%;
             flex: 0 0 16%;
-    max-width: 16%;
+    max-width: 16%; */
     padding: 15px;
   }
   
@@ -22,6 +22,7 @@
     z-index: 1;
     position: relative;
   }
+  
   
   .threed-container-wrapper {
     -webkit-perspective: 2950px;
@@ -36,11 +37,12 @@
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+        justify-content: center;
   }
   
   .three-d-album-width {
     width: 122%;
-    margin-top: 300px;
+    margin-top: 185px;
   }
   
   .single-3d:hover img {
@@ -57,7 +59,7 @@
   }
   
   .three-d-album {
-    background-image: url("../../media/background/play_bg.png");
+    background-image: url("../../../../media/background/play_bg.png");
     background-position: left 93%;
     background-repeat: no-repeat;
     background-size: auto;

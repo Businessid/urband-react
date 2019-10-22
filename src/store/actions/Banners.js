@@ -1,17 +1,21 @@
-import {FETCH_HOMEBANNER} from "./types";
+import {FETCH_BANNER} from "./types";
 
-export const fetchHomeBanner = () => {
+export const fetchBanner = (id) => {
     return dispatch => {
+        const body = {
+            page: id
+        };
         fetch("http://167.71.231.3/api/banners", {
-            method: "POST"
+            method: "POST",
+            body: JSON.stringify(body)
         })
             .then(res => res.json())
             .then(res => {
                 //console.log("response", res.result[0]);
                 
                 dispatch({
-                    type: FETCH_HOMEBANNER,
-                    value: res.result[0]
+                    type: FETCH_BANNER,
+                    value: res.result[0]    
                 });
             })
             .catch(error => {

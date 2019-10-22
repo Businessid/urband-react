@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { connect } from "react-redux";
-import * as actionCreators from "../../../src/store/actions/";
+import * as actionCreators from "../../store/actions";
 
 
 class multiCarouselHero extends Component {

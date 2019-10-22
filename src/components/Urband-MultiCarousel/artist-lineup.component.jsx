@@ -15,10 +15,7 @@ class multiCarousel extends Component{
 						<p>There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some injected humour.</p>
 					</div>
 				</div>
-				
-				
 			</div>
-			
 		</section>
                       
         

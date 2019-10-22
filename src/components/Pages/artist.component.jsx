@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-
+import ComingSoon  from '../Pages/comingsoon.component'
+import BannerHero from "../Banners/bannerHero";
 import { connect } from "react-redux";
 import * as actionCreators from "../../../src/store/actions/";
 
@@ -12,28 +13,18 @@ class Artist extends Component {
   render() {
     const image_url = "http://167.71.231.3/storage/"
     const posts = this.props.posts;
+    console.log("About",posts );
+    
     return (
       <div>
-        <section className="page-header artist-banner">
-          <div className="tim-container">
-            <div className="page-header-title text-center">
-              <h2>Artists</h2>
-            </div>
-
-            <div className="breadcrumbs">
-              <Link to="/index">Home</Link>
-              <span>/</span>
-              <span>Artists</span>
-            </div>
-          </div>
-        </section>
+       <BannerHero title={"Artist"}/>
 
         <section id="about-two" className="section-padding">
           <div className="tim-container">
             <div className="artist-timeline">
               {posts.length > 0
                 ? posts.map(item => {
-                  const about = atob(item.about);
+                  const stripedHtml = item.about.replace(/<[^>]+>/g, '');
                     return (
                       <div className="row no-gutters artist-row" key={item.id}>
                         <div className="col-lg-6">
@@ -45,8 +36,7 @@ class Artist extends Component {
                             </span>
 
                             <div
-                              className="content"
-                              dangerouslySetInnerHTML={{ __html: about }}
+                              className="content" contentEditable='true' dangerouslySetInnerHTML={{ __html: stripedHtml}}
                             ></div>
                             <h4 className="alb-title">Album & Single</h4>
                             <div className="alb-single">
@@ -96,7 +86,11 @@ class Artist extends Component {
                       </div>
                     );
                   })
-                : ""}
+                :<div>
+                  <ComingSoon/>
+                </div>
+
+                }
             </div>
           </div>
         </section>

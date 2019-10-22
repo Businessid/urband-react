@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import './product-list.component.css';
 import { connect } from "react-redux";
-import * as actionCreators from "../../../src/store/actions/";
+import * as actionCreators from "../../../store/actions";
 class ProductListHero extends Component {
 
 

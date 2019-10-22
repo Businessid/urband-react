@@ -2,7 +2,7 @@
   ##  Latest release section
   --------------------------------------------------------------*/
   .latest-relese {
-    background-image: url("../../media/background/3.png");
+    background-image: url("../../../media/background/3.png");
     background-postion: top;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -240,7 +240,7 @@
     position: absolute;
     position-opacity: 0;
     animation: move 3s infinite reverse;
-    background-image: url("../../media/music/1.png");
+    background-image: url("../../../media/music/1.png");
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -252,7 +252,7 @@
     transition: all 0.3s;
   }
   
-  .bubble.icon-1 {
+  /* .bubble.icon-1 {
     background-image: url("../../media/music/1.png");
   }
   
@@ -270,7 +270,7 @@
   
   .bubble.icon-5 {
     background-image: url("../../media/music/5.png");
-  }
+  } */
   
   .bubble:nth-child(1) {
     height: 17px;

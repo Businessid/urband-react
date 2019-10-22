@@ -157,7 +157,7 @@
   
   .wide_line_bg {
     position: relative;
-    background-image: url("../../media/background/play_bg_right.png");
+    background-image: url("../../../media/background/play_bg_right.png");
     background-position: right 93%;
     background-repeat: no-repeat;
     background-size: auto;
