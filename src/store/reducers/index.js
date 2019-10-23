@@ -17,5 +17,5 @@ export default combineReducers({
     albumdetails:albumdetailsReducer,
     banners:BannerReducer,
     whoweare:whoWeAreReducer,
-    gallerypics:gallerypics
+    gallerycategory:gallerypics
 })

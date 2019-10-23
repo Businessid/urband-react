@@ -1,4 +1,4 @@
-import {FETCH_ALBUMS, FETCH_ALBUMSDETAILS, FETCH_GALLERYPICS} from "./types";
+import {FETCH_ALBUMS, FETCH_ALBUMSDETAILS, FETCH_GALLERYCATEGORY} from "./types";
 
 export const fetchAlbums = () => {
     return dispatch => {
@@ -42,12 +42,13 @@ export const fetchAlbumsDetails = (id) => {
             });
     };
 };
-export const fetchgallerypics = (id) => {
+
+export const fetchgallerycategory = () => {
     return dispatch => {
         const body = {
-            "page":"1","category":"1"
+            "page":"1"
         };
-        fetch("http://167.71.231.3/api/gallery", {
+        fetch("http://167.71.231.3/api/gallerycategory", {
             method: "POST",
             body: JSON.stringify(body)
         })
@@ -56,7 +57,7 @@ export const fetchgallerypics = (id) => {
                 console.log("res", res);
                 
                 dispatch({
-                    type: FETCH_GALLERYPICS,
+                    type: FETCH_GALLERYCATEGORY,
                     value: res.result
                 });
             })
