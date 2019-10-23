@@ -29,6 +29,7 @@
     "react-multi-carousel": "^2.2.5",
     "react-playlist-player": "^1.0.11",
     "react-rangeslider": "^2.2.0",
+    "react-read-more-less": "^0.1.6",
     "react-redux": "^7.1.1",
     "react-router-dom": "^5.0.1",
     "react-router-redux": "^4.0.8",

@@ -7,7 +7,9 @@ import {
   faMapMarkerAlt
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ComingSoon  from '../Pages/comingsoon.component'
+import ReadMoreAndLess from 'react-read-more-less';
+import BannerHero from "../Banners/bannerHero";
+import ComingSoon from "../Pages/comingsoon.component";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actionCreators from "../../../src/store/actions/";
@@ -15,114 +17,123 @@ import * as actionCreators from "../../../src/store/actions/";
 library.add(faCalendarCheck, faClock, faTheaterMasks, faMapMarkerAlt);
 
 class EventList extends Component {
+  constructor(props){
+    super(props);
+    this.state = { showText: false };
+  }
   componentDidMount() {
     this.props.fetchEvent();
   }
 
   render() {
+    const image_url = "http://167.71.231.3/storage/";
     const events = this.props.events;
-    const data = events.result;
     return (
       <div>
-        <section className="page-header artist-banner">
-          <div className="tim-container">
-            <div className="page-header-title text-center">
-              <h2>Events</h2>
-            </div>
-
-            <div className="breadcrumbs">
-              <Link to="/index">Home</Link>
-              <span>/</span>
-              <span>Events</span>
-            </div>
-          </div>
-        </section>
+        <BannerHero title={"Events"} />
         <div className="fullWrap">
-          <section className="blog-posts">
-            {events.length > 0 ? (
+          {events[0] ? (
+            <section className="blog-posts">
               <div className="container">
-                {data && data.length > 0 && (
-                  <div className="row">
-                    {data.map(item => {
-                      return (
-                        <div
-                          className="col-lg-4 col-md-4 col-sm-6 col-full-width"
-                          key={item.id}
-                        >
-                          <article className="blog-post">
-                            <div className="entry-image-wrapper">
-                              <Link to="/event">
-                                <figure className="post-thumbnail">
-                                  <img
-                                    src={events.image_url + "/" + item.image}
-                                    alt="blog Thumb"
+                <div className="row">
+                  {events.map(item => {
+                    return (
+                      <div
+                        className="col-lg-4 col-md-4 col-sm-6 col-full-width"
+                        key={item.id}
+                      >
+                        <article className="blog-post">
+                          <div className="entry-image-wrapper">
+                            <Link to="/event">
+                              <figure className="post-thumbnail event-box">
+                                <img
+                                  src={image_url + item.image} className=""
+                                  alt="blog Thumb"
+                                />
+                              </figure>
+                            </Link>
+                          </div>
+                          <div className="post-type-icon">
+                            <span>6 Oct</span>
+                          </div>
+                          <div className="entry-content-wrapper">
+                            <div className="event-title">
+                              <span>{item.title}</span>
+                              <span className="event-status">Upcoming</span>
+                            </div>
+                            <div className="entry-meta entry-meta-footer">
+                              <ul className="event-shortdetails">
+                                <li>
+                                  <FontAwesomeIcon
+                                    icon={faCalendarCheck}
+                                    className="ico"
                                   />
-                                </figure>
-                              </Link>
+                                  {item.date_on}
+                                </li>
+                                <li>
+                                  <FontAwesomeIcon
+                                    icon={faClock}
+                                    className="ico"
+                                  />
+                                  11:00 PM to 1:00 AM
+                                </li>
+                                <li>
+                                  <FontAwesomeIcon
+                                    icon={faMapMarkerAlt}
+                                    className="ico"
+                                  />
+                                  {item.location}
+                                </li>
+                                <li>
+                                  <FontAwesomeIcon
+                                    icon={faTheaterMasks}
+                                    className="ico"
+                                  />
+                                  Beatless
+                                </li>
+                              </ul>
                             </div>
-                            <div className="post-type-icon">
-                              <span>6 Oct</span>
-                            </div>
-                            <div className="entry-content-wrapper">
-                              <div className="event-title">
-                                <span>{item.title}</span>
-                                <span className="event-status">Upcoming</span>
-                              </div>
-                              <div className="entry-meta entry-meta-footer">
-                                <ul className="event-shortdetails">
-                                  <li>
-                                    <FontAwesomeIcon
-                                      icon={faCalendarCheck}
-                                      className="ico"
-                                    />
-                                    {item.date_on}
-                                  </li>
-                                  <li>
-                                    <FontAwesomeIcon
-                                      icon={faClock}
-                                      className="ico"
-                                    />
-                                    11:00 PM to 1:00 AM
-                                  </li>
-                                  <li>
-                                    <FontAwesomeIcon
-                                      icon={faMapMarkerAlt}
-                                      className="ico"
-                                    />
-                                    {item.location}
-                                  </li>
-                                  <li>
-                                    <FontAwesomeIcon
-                                      icon={faTheaterMasks}
-                                      className="ico"
-                                    />
-                                    Beatless
-                                  </li>
-                                </ul>
-                              </div>
-                              <div className="entry-content">
-                                <p>{item.description}</p>
-                              </div>
-                              <Link
-                                to="/"
-                                className="tim-btn tim-btn-bgt read-more-btn"
+                            <div className="entry-content">
+                              {/* <p
+                                dangerouslySetInnerHTML={{
+                                  __html: item.description
+                                }}
+                              > */}
+
+                              
+                                <ReadMoreAndLess
+                                  ref={this.ReadMore}
+                                  className="read-more-content"
+                                  charLimit={250}
+                                  readMoreText="Read more"
+                                  readLessText="Read less"
                               >
-                                Buy Ticket
-                              </Link>
+                                  {item.description}
+                                 
+                              </ReadMoreAndLess>
+                                
+                             
+                              {/* </p> */}
                             </div>
-                          </article>
-                        </div>
-                      );
-                    })}
-                  </div>
-                )}
+                            <Link
+                              to="/"
+                              className="tim-btn tim-btn-bgt read-more-btn"
+                            >
+                              Buy Ticket
+                            </Link>
+                          </div>
+                        </article>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
-            ) : (
+            </section>
+          ) : (
               <div>
                 <ComingSoon />
               </div>
             )}
-          </section>
         </div>
       </div>
     );

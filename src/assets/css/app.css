@@ -5628,7 +5628,12 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   color: #494848;
 }
-
+.post-thumbnail.event-box{
+    display: block;
+    max-width: 100%;
+    height: 200px;
+    position: relative;
+}
 .blog-post .post-thumbnail a {
   display: block;
 }
@@ -11293,9 +11298,11 @@ margin-left: 0 !important;
   --------------------------------------------------------------*/
 .page-header {
   padding: 280px 0 30px;
-  background-position: center;
-  background-size: cover;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
   position: relative;
+  height: 484px !important;
 }
 
 .page-header.event-header {
