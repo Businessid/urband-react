@@ -106,7 +106,7 @@ export const fetchEvent = () => {
             .then(res => {
                 dispatch({
                     type: FETCH_EVENTLIST,
-                    value: res
+                    value: res.result
                 });
             })
             .catch(error => {

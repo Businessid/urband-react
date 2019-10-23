@@ -4,7 +4,7 @@ import * as actionCreators from "../../../src/store/actions/";
 
 class WhatweDo extends Component {
   render() {
-    const image_url = "http://167.71.231.3/storage/";
+    //const image_url = "http://167.71.231.3/storage/";
     const detail = this.props.detail;
     const services = detail.whatwedo;
 
@@ -12,25 +12,25 @@ class WhatweDo extends Component {
     return (
       <div>
         <div className="page-padd">
-          <div class="container">
+          <div className="container">
             <div className="section-title style-four text-center">
               <h2>Let's Do It</h2>
             </div>
             {services && services.length > 0 && (
-              <div class="row">
+              <div className="className">
                 {services.map(item => {
                   return (
-                    <div class="col-lg-4" key={item.id}>
+                    <div className="col-lg-4" key={item.id}>
                       <section className="services-grid">
                         <header>
                           <h1>{item.title}</h1>
                         </header>
 
                         <div className="content">
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Omnis rem voluptates, animi amet dolorem
-                            tenetur veritatis? Sapiente!
+                          <p dangerouslySetInnerHTML={{
+                                  __html: item.description
+                                }}>
+                           
                           </p>
                         </div>
                       </section>

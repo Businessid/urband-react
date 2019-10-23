@@ -1622,7 +1622,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-magic-line .user-login li.cart-count .cart-overview .cart-item .product-thumbnail {
   margin-right: 1.3em;
-  float: left;
   padding: 0 !important;
   display: inline-block;
   width: 70px;
@@ -3930,7 +3929,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .album-box .album-details .content {
   display: inline-block;
-  float: left;
 }
 
 .album-box .album-details .content p {
@@ -4471,12 +4469,16 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   z-index: 900;
   text-align: center;
+  transform: rotateX(0deg) rotateY(0deg);
   -webkit-transform: rotateX(0deg) rotateY(0deg);
   -moz-transform: rotateX(0deg) rotateY(0deg);
+  transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
+  transition: all .4s ease-in-out;
   -webkit-transition: all .4s ease-in-out;
   -o-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
@@ -4509,14 +4511,12 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 0;
   z-index: 1000;
+  transform: rotateY(-180deg);
   -webkit-transform: rotateY(-180deg);
-  -webkit-transform--moz-transform: rotateY(-180deg);
+  transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   -webkit-transform-style--moz-transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-  -webkit-backface-visibility--moz-backface-visibility: hidden;
-  -webkit-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
+  backface-visibility: hidden;
   transition: all .4s ease-in-out;
   width: 100%;
   height: 100%;
@@ -4584,6 +4584,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   height: 420px;
   position: relative;
+  perspective: 600px;
   -webkit-perspective: 600px;
   -moz-perspective: 600px;
 }
@@ -4605,6 +4606,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .upc-con-three.flip .upc-count-wrap {
   z-index: 1000;
+  transform: rotateX(0deg) rotateY(0deg);
   -webkit-transform: rotateX(0deg) rotateY(0deg);
   -moz-transform: rotateX(0deg) rotateY(0deg);
 }
@@ -5628,7 +5630,12 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   color: #494848;
 }
-
+.post-thumbnail.event-box{
+    display: block;
+    max-width: 100%;
+    height: 200px;
+    position: relative;
+}
 .blog-post .post-thumbnail a {
   display: block;
 }
@@ -8180,7 +8187,6 @@ div.jp-seeking-bg {
 }
 
 #the-sorcerers-wrath-container .jp-controls a {
-  float: left;
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -8330,7 +8336,6 @@ div.jp-seeking-bg {
 }
 
 #the-sorcerers-wrath-container .jp-playlist ul li.jp-free-media a {
-  height: auto;
   margin: 0;
   padding: 0;
   display: inline;
@@ -10527,9 +10532,6 @@ margin-left: 0 !important;
   top: 100px;
   z-index: -1;
   background-image: -moz-linear-gradient(90deg, #ee658f 0%, #a33cbf 100%);
-  background-image-background-image: -webkit-linear-gradient(90deg, #ee658f 0%, #a33cbf 100%);
-  background-image-background-image: -ms-linear-gradient(90deg, #ee658f 0%, #a33cbf 100%);
-  background-image-box-shadow: 0px 3px 12.35px 0.65px rgba(4, 56, 115, 0.09);
 }
 
 .tab-right h6::before, .tab-right h6::after {
@@ -10655,8 +10657,6 @@ margin-left: 0 !important;
 .header_player.tab_page {
   position: relative;
   background-image: -moz-linear-gradient(90deg, #ee658f 0%, #a33cbf 100%);
-  background-image-background-image: -webkit-linear-gradient(90deg, #ee658f 0%, #a33cbf 100%);
-  background-image-background-image: -ms-linear-gradient(90deg, #ee658f 0%, #a33cbf 100%);
   border: 12px solid #fff;
   -webkit-box-shadow: 0px 3px 12.35px 0.65px rgba(4, 56, 115, 0.09);
           box-shadow: 0px 3px 12.35px 0.65px rgba(4, 56, 115, 0.09);
@@ -10786,7 +10786,6 @@ margin-left: 0 !important;
 }
 
 .single-related-album .single-related-prod-bottom .left {
-  float: left;
   display: inline-block;
 }
 
@@ -10987,7 +10986,6 @@ margin-left: 0 !important;
 }
 
 .event-details .event-details .event-brief .brief-bottom h6 {
-  float: left;
   width: 50%;
   display: inline-block;
   font-size: 26px;
@@ -11243,8 +11241,6 @@ margin-left: 0 !important;
 
 .single-event-list-widget:hover {
   background-image: -moz-linear-gradient(90deg, #ee658f 0%, #a33cbf 100%);
-  background-image-background-image: -webkit-linear-gradient(90deg, #ee658f 0%, #a33cbf 100%);
-  background-image-background-image: -ms-linear-gradient(90deg, #ee658f 0%, #a33cbf 100%);
   -webkit-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s;
@@ -11293,9 +11289,11 @@ margin-left: 0 !important;
   --------------------------------------------------------------*/
 .page-header {
   padding: 280px 0 30px;
-  background-position: center;
-  background-size: cover;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
   position: relative;
+  height: 484px !important;
 }
 
 .page-header.event-header {
@@ -14041,9 +14039,9 @@ ul.products li.product-two .ajax_add_to_cart i {
   ##   Footer Three
   --------------------------------------------------------------*/
 #footer-3 {
-  background-image: url("../../media/background/footer-bg.jpg");
+  background: url("../../media/background/footer-bg.jpg");
   background-size: 100%;
-  background-postion: center;
+  background-postion: center center;
   padding: 260px 0 180px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14952,7 +14950,7 @@ ul.products li.product-two .ajax_add_to_cart i {
   padding: 3px 11px;
   border-radius: 5px;
   margin-top: 4px;
-  display: inline;
+  display: inline-block;
   font-size: 14px;
   text-transform: capitalize;
   margin-left: 18px;

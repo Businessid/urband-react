@@ -4,9 +4,9 @@ import { connect } from "react-redux";
 import * as actionCreators from "../../../src/store/actions/";
 
 class BannerHero extends Component {
-  constructor(props){
-    super(props)
-  }
+  // constructor(props){
+  //   super(props)
+  // }
   componentDidMount() {
     let banner = this.props.title; 
     this.props.fetchBanner(banner);
@@ -18,12 +18,12 @@ class BannerHero extends Component {
     console.log("item", getbanner);
 
     let bannerImg = {
-      backgroundImage: "url(" + image_url + getbanner.image + ")"
+      background: "url(" + image_url + getbanner.image + ")"
     };
 
     return (
       <div>
-        <section className="page-header artist-banner" style={bannerImg}>
+        <section className="page-header" style={bannerImg}>
           <div className="tim-container">
             <div className="page-header-title text-center">
               <h2>{getbanner.title}</h2>
