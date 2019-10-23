@@ -29,7 +29,7 @@ class PlayerHero extends Component{
                 {
                     position: '1',
                     songName: 'first',
-                    songUrl: 'http://www.hochmuth.com/mp3/Haydn_Cello_Concerto_D-1.mp3'
+                    songUrl: 'http://167.71.231.3/storage/audio/track_20191022_5daefd35be4ae.mp3'
                 },
                 {
                     position: '2',
@@ -86,7 +86,7 @@ class PlayerHero extends Component{
                                         <button class="tim-btn">Share</button>
                                     </div> */}
 
-                                    {/* <AudioPlayer currentPlayList={this.state.currentPlayList} /> */}
+                                    <AudioPlayer currentPlayList={this.state.currentPlayList} />
 
                                    
                                     <div className="jp-playlist style-fullwidth">

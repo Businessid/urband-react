@@ -5,7 +5,6 @@ import BannerHero from "../Banners/bannerHero";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actionCreators from "../../../src/store/actions/";
 

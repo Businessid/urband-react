@@ -34,7 +34,7 @@ class multiCarouselHero extends Component {
 			},
 		};
 		return (
-			<section className="section-padding-two artist-lineup">
+			<section className="artist-lineup hero">
 				<div className="tim-container clearfix">
 				{posts && posts.length > 0 && (
                       <Carousel
@@ -44,7 +44,7 @@ class multiCarouselHero extends Component {
 						  
                         {posts.map(item => {
                           return (
-                            <div className="artist-single home-page">
+                            <div className="artist-single home-page" key={item.id}>
 								<img
 									src={image_url + "/" + item.image}
 									className="ink-pattern"

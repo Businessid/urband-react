@@ -10,9 +10,9 @@ class albumListHome extends Component {
 
   render() {
     var isResponseData = false;
-    if (this.props.albums.success == true)
+    if (this.props.albums.success === true)
       // Second step
-      isResponseData = true;
+    isResponseData = true;
     const image_url = "http://167.71.231.3/storage/";
     const albums = this.props.albums.result; // first step
     //console.log("albumxzzzz", albums);
@@ -38,8 +38,8 @@ class albumListHome extends Component {
                       {albums.length > 0
                         ? albums.map(item => {
                             return (
-                              <div className="col-md-4">
-                                <div className="single-3d empty-space"></div>
+                              <div className="col-md-2" key={item.id}>
+                                <div className="single-3d col-md-2"></div>
 
                                 <div className="single-3d" key={item.id}>
                                   <Link to="/albums">

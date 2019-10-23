@@ -38,7 +38,7 @@
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0"
   },
-  "homepage": "https://Businessid.github.io/urband-react",
+  "homepage": "http://167.71.231.3/react",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

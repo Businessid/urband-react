@@ -12,9 +12,9 @@ import * as actionCreators from "../../../src/store/actions/";
 
 library.add(faGlassCheers, faMixcloud, faMicrophone);
 class WhoWeAre extends Component {
-  constructor() {
-    super();
-  }
+  // constructor() {
+  //   super();
+  // }
   componentDidMount() {
     this.props.fetchWhoWeAre();
   }
@@ -70,7 +70,7 @@ class WhoWeAre extends Component {
         </section>
 
         <section className="black-bg side-img-section what-we-do-section">
-          <div class="col-sm-6 col-sm-offset-6 side-img d-none d-md-block"></div>
+          <div className="col-sm-6 col-sm-offset-6 side-img d-none d-md-block"></div>
           <div className="container">
             <div className="row">
               <div className="col-md-5 col-12">
