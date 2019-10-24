@@ -32,15 +32,8 @@ class Contact extends Component{
 		axios.get('http://167.71.231.3/api/contactus')
 			.then(res => this.setState({isLoaded:true,items:res.data[0]}))
 			.catch(err => console.log(err));
-			fetch('http://167.71.231.3/api/contactus')
-			.then(response =>  response.json())
-			.then(resData => {	//console.log("resdata", resData)
-				this.setState({
-					isLoaded:true,
-					items:resData
-				})
-			});
-	}
+			
+}
 
 
     render(){
