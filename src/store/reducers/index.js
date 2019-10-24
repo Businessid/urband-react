@@ -18,7 +18,11 @@ export default combineReducers({
     albumdetails:albumdetailsReducer,
     banners:BannerReducer,
     whoweare:whoWeAreReducer,
+<<<<<<< HEAD
     gallerypics:gallerypics,
     contact:contactReducer,
 
+=======
+    gallerycategory:gallerypics
+>>>>>>> 5dd12ca7b05bcd6a1e3e9d4064c84aa253124500
 })

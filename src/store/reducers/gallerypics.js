@@ -1,4 +1,4 @@
-import { FETCH_GALLERYPICS} from '../actions/types';
+import { FETCH_GALLERYCATEGORY} from '../actions/types';
 
 const initialState ={
     items:[]
@@ -6,7 +6,7 @@ const initialState ={
 
 const gallerypics = (state = initialState, action) => {
   switch(action.type){
-      case FETCH_GALLERYPICS:
+      case FETCH_GALLERYCATEGORY:
           return{
               ...state,
            
