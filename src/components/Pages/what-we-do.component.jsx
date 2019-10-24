@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actionCreators from "../../../src/store/actions/";
 
@@ -17,7 +18,7 @@ class WhatweDo extends Component {
               <h2>Let's Do It</h2>
             </div>
             {services && services.length > 0 && (
-              <div className="className">
+              <div className="row">
                 {services.map(item => {
                   return (
                     <div className="col-lg-4" key={item.id}>
@@ -26,12 +27,12 @@ class WhatweDo extends Component {
                           <h1>{item.title}</h1>
                         </header>
 
-                        <div className="content">
-                          <p dangerouslySetInnerHTML={{
+                        <div className="content" >
+                          <div className="text" dangerouslySetInnerHTML={{
                                   __html: item.description
                                 }}>
-                           
-                          </p>
+                          </div>
+                          <Link to="" class="tim-btn">View More</Link>
                         </div>
                       </section>
                     </div>

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import ComingSoon from "../Pages/comingsoon.component";
 import BannerHero from "../Banners/bannerHero";
+import ReadMoreAndLess from 'react-read-more-less';
 import { connect } from "react-redux";
 import * as actionCreators from "../../../src/store/actions/";
 
@@ -25,7 +26,7 @@ class Artist extends Component {
                 <div className="tim-container">
                   <div className="artist-timeline">
                     {posts.map(item => {
-                      const stripedHtml = item.about.replace(/<[^>]+>/g, "");
+                    
                       return (
                         <div
                           className="row no-gutters artist-row"
@@ -39,13 +40,11 @@ class Artist extends Component {
                                 Album: Rockstar, first rain, Love Song (More)
                               </span>
 
-                              <div
-                                className="content"
-                                contentEditable="true"
-                                dangerouslySetInnerHTML={{
-                                  __html: stripedHtml
-                                }}
-                              ></div>
+                              
+                              <div className="content" dangerouslySetInnerHTML={{
+                                  __html: item.about
+                                }}>
+                          </div>
                               <h4 className="alb-title">Album & Single</h4>
                               <div className="alb-single">
                                 <Link to="" className="single-items">

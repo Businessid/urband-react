@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import WhatweDo from "../Pages/what-we-do.component";
 import InfoHero from "../Pages/info.component";
+import BannerHero from "../Banners/bannerHero";
 import Gang from "../Pages/gang.component";
 import { Link } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -27,20 +28,8 @@ class WhoWeAre extends Component {
     //const about = atob(whoweare.description);
 
     return (
-      <div>
-        <section className="page-header artist-banner about">
-          <div className="tim-container">
-            <div className="page-header-title text-center">
-              <h2>Who we are</h2>
-            </div>
-
-            <div className="breadcrumbs">
-              <Link to="/">Home</Link>
-              <span>/</span>
-              <span>About</span>
-            </div>
-          </div>
-        </section>
+      <div className="fullWrap">
+        <BannerHero title={"Who We Are"}/>
 
         <section className="section-hero pb-0">
           <div className="container">

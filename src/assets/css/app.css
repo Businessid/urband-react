@@ -7222,6 +7222,7 @@ ul.comment-list .comment-body .reply a:hover {
   padding-bottom: 15px;
   border-bottom: 1px solid #ebebeb;
   margin-bottom: 20px;
+  justify-content: center;
 }
 
 .artist-about .alb-title {
@@ -16052,14 +16053,19 @@ ul.products li.product-two .ajax_add_to_cart i {
     box-shadow: 13px 32px 36px -14px hsla(0, 0%, 70%, 0.3);
     text-align: center;
   }
-  .services-grid .content p {
+  .services-grid .content .text {
     margin-top: 5vw;
     font-size: 14px;
     line-height: 18px;
     text-align: center;
  
   }
-  .services-grid .content button{
+  .services-grid .content .text p{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  }
+  .services-grid .content a{
     padding: 5px 21px;
     font-size: 16px;
     margin-top: 0.5em;

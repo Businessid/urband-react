@@ -24,18 +24,15 @@ export const fetchPosts = () => {
 
 export const fetchContact = () => {
     return dispatch => {
-        const body = {
-            page: 1
-        };
-        fetch("https://167.71.231.3/api/contactus", {
-            method: "POST",
-            body: JSON.stringify(body)
+      
+        fetch("http://167.71.231.3/api/aboutus", {
+            method: "GET"
         })
             .then(res => res.json())
-            .then(res => {
+            .then(res =>  {
                 dispatch({
                     type: FETCH_CONTACT,
-                    value: res
+                    value: res.result
                 });
             })
             .catch(error => {

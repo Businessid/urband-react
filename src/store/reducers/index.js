@@ -8,6 +8,7 @@ import albumdetailsReducer from './albumdetailsReducer'
 import BannerReducer from './BannerReducer';
 import whoWeAreReducer from './whoWeAreReducer';
 import gallerypics from './gallerypics';
+import contactReducer from './contactReducer';
 export default combineReducers({
     posts: postReducer, // choose any name
     clients: clientReducer,
@@ -17,5 +18,7 @@ export default combineReducers({
     albumdetails:albumdetailsReducer,
     banners:BannerReducer,
     whoweare:whoWeAreReducer,
-    gallerypics:gallerypics
+    gallerypics:gallerypics,
+    contact:contactReducer,
+
 })
