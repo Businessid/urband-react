@@ -127,7 +127,7 @@ export const fetchEventDetail = (id) => {
                 console.log("resssssssssss", res.result);
                 dispatch({
                     type: FETCH_EVENTDETAIL,
-                    value: res.result
+                    value: res
                 });
             })
             .catch(error => {
