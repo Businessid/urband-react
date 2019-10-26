@@ -50,7 +50,9 @@ class EventList extends Component {
                       >
                         <article className="blog-post">
                           <div className="entry-image-wrapper">
-                            <Link to="/event">
+                            <Link to={{
+                                pathname: `/event/${item.id}`
+                              }}>
                               <figure className="post-thumbnail event-box">
                                 <img
                                   src={image_url + item.image} className=""

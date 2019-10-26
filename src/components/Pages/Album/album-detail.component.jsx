@@ -12,8 +12,6 @@ class AlbumDetail extends Component {
 
     render() {
         const album = this.props.album;
-        //console.log("gggggggrrrrrrrrrrrrrgggggg", album);
-
         return (
 
             <div>

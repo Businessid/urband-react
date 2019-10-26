@@ -112,22 +112,22 @@ export const fetchEvent = () => {
     };
 };
 
-export const fetchEventDetail = () => {
+export const fetchEventDetail = (id) => {
     return dispatch => {
         const body = {
-            page: 1
+            "eventid": id
         };
 
-        fetch("http://167.71.231.3/api/events", {
+        fetch("http://167.71.231.3/api/eventdetails", {
             method: "POST",
             body: JSON.stringify(body)
         })
             .then(res => res.json())
             .then(res => {
-                console.log("resssssssssss", res.result[0]);
+                console.log("resssssssssss", res.result);
                 dispatch({
                     type: FETCH_EVENTDETAIL,
-                    value: res
+                    value: res.result
                 });
             })
             .catch(error => {
