@@ -1,7 +1,7 @@
 import { FETCH_EVENTDETAIL } from '../actions/types';
 
 const initialState ={
-    data:[]
+    eventdetails:[]
 }
 
 const eventDetailReducer = (state = initialState, action) => {
@@ -10,7 +10,7 @@ const eventDetailReducer = (state = initialState, action) => {
           return{
               ...state,
            
-              data: action.value
+              eventdetails: action.value
           }
     default:
         return state; 

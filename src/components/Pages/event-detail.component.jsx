@@ -1,9 +1,20 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
-
+import { connect } from "react-redux";
+import * as actionCreators from "../../../src/store/actions/";
 class EventDetail extends Component {
+  componentDidMount() {
+    let eventid = this.props.location.pathname.split('/').pop();
+    this.props.fetchEventDetail(eventid);
+  }
+
   render() {
+    const event = this.props.event;
+    const image_url = "http://167.71.231.3/storage/";
+    if (event)
+      console.log("gggggggggg", event);
+
     const responsive = {
       superLargeDesktop: {
         // the naming can be any, depends on you.
@@ -29,8 +40,8 @@ class EventDetail extends Component {
         <section className="page-header event-header">
           <div className="tim-container">
             <div className="page-header-title event-page-header text-center">
-              <h2>Music Conference 2018</h2>
-              <h3>10 - 12 DECEMBER, 2019, DUBLIN</h3>
+              <h2>{event.headline}</h2>
+              <h3>{event.title}</h3>
 
               <Link to="/" className="tim-btn tim-btn-bgt">
                 Buy Now
@@ -50,7 +61,12 @@ class EventDetail extends Component {
             <div className="row">
               <div className="col-lg-6">
                 <div className="event-thumb">
-                  <img src={require("../../media/about/4.jpg")} alt="Thumb" />
+                  <img
+                    src={
+                      image_url +
+                      "/" +
+                      event.image
+                    } alt="Thumb" />
                 </div>
               </div>
 
@@ -61,23 +77,21 @@ class EventDetail extends Component {
                   </h2>
 
                   <p>
-                    There are many variations of passages th of Lorem Ipsum
-                    available but is a the majority have suffered alteration in
-                    some form, by injected humour believable dummy.
+                    {event.description}
                   </p>
 
                   <div className="event-details">
                     <p>
-                      <span>Date & Time:</span> December 27, 2018 At 8:00 Am To
-                      December 31, 2018 At 10:00 Am{" "}
+                      <span>Date & Time:</span> {event.date_from} To
+                      {event.date_to}, {event.time_from} To {event.time_to}
                     </p>
 
                     <p>
-                      <span>Location:</span> Indoor Stadium 02 , Singapore
+                      <span>Location:</span> {event.location}
                     </p>
                   </div>
 
-                  <h4>Concert Introduction</h4>
+                  {/* <h4>Concert Introduction</h4>
                   <p>
                     There are many variations of passages of Lorem Ipsum
                     available, but is the majoriyty have suffered the a
@@ -85,7 +99,7 @@ class EventDetail extends Component {
                     words which don't look even slightly an that is believable.
                     There are many variations of passages of Lorem Ipsum the a
                     available, but the majority.
-                  </p>
+                  </p> */}
 
                   <Link to="/" className="tim-btn">
                     Buy Tickets
@@ -216,4 +230,23 @@ class EventDetail extends Component {
   }
 }
 
-export default EventDetail;
+
+
+const mapDispatchToProps = dispatch => {
+  // call action functions
+  return {
+    fetchEventDetail: (eventid) => dispatch(actionCreators.fetchEventDetail(eventid))
+  };
+};
+
+const mapStateToProps = state => {
+  return {
+    event: state.eventdetails.eventdetails
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(EventDetail);
+
