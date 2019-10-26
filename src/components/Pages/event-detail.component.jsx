@@ -8,11 +8,11 @@ class EventDetail extends Component {
       superLargeDesktop: {
         // the naming can be any, depends on you.
         breakpoint: { max: 4000, min: 3000 },
-        items: 4
+        items: 1
       },
       desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 4
+        items: 1
       },
       tablet: {
         breakpoint: { max: 1024, min: 464 },
@@ -118,7 +118,7 @@ class EventDetail extends Component {
               <div className="swiper-wrapper">
                 <div className="swiper-slide">
                   <Carousel responsive={responsive}>
-                    <li>
+                    <div>
                       <div className="schedule-item">
                         <div className="schedule-thumb">
                           <img
@@ -134,77 +134,8 @@ class EventDetail extends Component {
                           Durations: 60, - Tracks: 5 songs
                         </p>
                       </div>
-                    </li>
-                    <li>
-                      <div className="schedule-item">
-                        <div className="schedule-thumb">
-                          <img
-                            src={require("../../media/schedule/1.jpg")}
-                            alt="thumb"
-                          />
-                        </div>
-                        <h4 className="sch-time">10 am - 11 am</h4>
-
-                        <h3 className="band-name">Brand Name 2018</h3>
-
-                        <p className="duration">
-                          Durations: 60, - Tracks: 5 songs
-                        </p>
-                      </div>
-                    </li>
-
-                    <li>
-                      <div className="schedule-item">
-                        <div className="schedule-thumb">
-                          <img
-                            src={require("../../media/schedule/1.jpg")}
-                            alt="thumb"
-                          />
-                        </div>
-                        <h4 className="sch-time">10 am - 11 am</h4>
-
-                        <h3 className="band-name">Brand Name 2018</h3>
-
-                        <p className="duration">
-                          Durations: 60, - Tracks: 5 songs
-                        </p>
-                      </div>
-                    </li>
-
-                    <li>
-                      <div className="schedule-item">
-                        <div className="schedule-thumb">
-                          <img
-                            src={require("../../media/schedule/1.jpg")}
-                            alt="thumb"
-                          />
-                        </div>
-                        <h4 className="sch-time">10 am - 11 am</h4>
-
-                        <h3 className="band-name">Brand Name 2018</h3>
-
-                        <p className="duration">
-                          Durations: 60, - Tracks: 5 songs
-                        </p>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="schedule-item">
-                        <div className="schedule-thumb">
-                          <img
-                            src={require("../../media/schedule/1.jpg")}
-                            alt="thumb"
-                          />
-                        </div>
-                        <h4 className="sch-time">10 am - 11 am</h4>
-
-                        <h3 className="band-name">Brand Name 2018</h3>
-
-                        <p className="duration">
-                          Durations: 60, - Tracks: 5 songs
-                        </p>
-                      </div>
-                    </li>
+                    </div>
+                    
                   </Carousel>
                 </div>
               </div>

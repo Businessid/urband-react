@@ -12,10 +12,9 @@ class Artist extends Component {
   }
 
   render() {
+    
     const image_url = "http://167.71.231.3/storage/";
     const posts = this.props.posts;
-    console.log("About", posts);
-
     return (
       <div>
         <BannerHero title={"Artist"} />
@@ -41,9 +40,23 @@ class Artist extends Component {
                               </span>
 
                               
-                              <div className="content" dangerouslySetInnerHTML={{
+                              {/* <div className="content" dangerouslySetInnerHTML={{
                                   __html: item.about
                                 }}>
+                          </div> */}
+
+                          <div className="content">
+                          <ReadMoreAndLess
+                                  ref={this.ReadMore}
+                                  className="read-more-content"
+                                  charLimit={250}
+                                  readMoreText="Read more"
+                                  readLessText="Read less"
+                              >
+                                
+                                   {item.about}
+                                 
+                              </ReadMoreAndLess>
                           </div>
                               <h4 className="alb-title">Album & Single</h4>
                               <div className="alb-single">

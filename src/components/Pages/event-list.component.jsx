@@ -19,15 +19,21 @@ library.add(faCalendarCheck, faClock, faTheaterMasks, faMapMarkerAlt);
 class EventList extends Component {
   constructor(props){
     super(props);
-    this.state = { showText: false };
+    this.state = { showText: false};
   }
   componentDidMount() {
     this.props.fetchEvent();
   }
 
+  
+
+
   render() {
     const image_url = "http://167.71.231.3/storage/";
     const events = this.props.events;
+    const desc = events.description;
+    function createMarkup(desc) { return {__html: desc}; };
+    
     return (
       <div>
         <BannerHero title={"Events"} />
@@ -94,12 +100,9 @@ class EventList extends Component {
                               </ul>
                             </div>
                             <div className="entry-content">
-                              {/* <p
-                                dangerouslySetInnerHTML={{
-                                  __html: item.description
-                                }}
-                              > */}
+                              { }
 
+                              {/* <div dangerouslySetInnerHTML={createMarkup(item.description)}/> */}
                               
                                 <ReadMoreAndLess
                                   ref={this.ReadMore}
@@ -108,12 +111,13 @@ class EventList extends Component {
                                   readMoreText="Read more"
                                   readLessText="Read less"
                               >
-                                  {item.description}
-                                 
+                            {item.description}
                               </ReadMoreAndLess>
-                                
                              
-                              {/* </p> */}
+
+                         
+                             
+                          
                             </div>
                             <Link
                               to="/"

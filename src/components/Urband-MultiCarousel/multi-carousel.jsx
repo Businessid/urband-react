@@ -6,6 +6,7 @@ import * as actionCreators from "../../store/actions";
 
 
 class multiCarouselHero extends Component {
+
 	componentDidMount() {
 		this.props.fetchPosts();
 	}

@@ -131,7 +131,7 @@ class Contact extends Component {
             </section>
           </div>
         ) : (
-          <div className="page-padd"></div>
+          <ComingSoon/>
         )}
       </div>
 	  </div>
