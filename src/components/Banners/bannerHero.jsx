@@ -8,14 +8,13 @@ class BannerHero extends Component {
   //   super(props)
   // }
   componentDidMount() {
-    let banner = this.props.title; 
+    let banner = this.props.title;
     this.props.fetchBanner(banner);
   }
 
   render() {
     const image_url = "http://167.71.231.3/storage/";
     const getbanner = this.props.banners;
-    console.log("item", getbanner);
 
     let bannerImg = {
       background: "url(" + image_url + getbanner.image + ")"
