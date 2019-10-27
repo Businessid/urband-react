@@ -126,7 +126,7 @@ export const fetchEventDetail = (id) => {
             .then(res => {
                 dispatch({
                     type: FETCH_EVENTDETAIL,
-                    value: res.result
+                    value: res
                 });
             })
             .catch(error => {
