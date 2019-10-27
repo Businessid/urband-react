@@ -20,7 +20,7 @@ import Vlog from './components/Pages/vlog.component'
 import Radio from './components/Pages/radio.component'
 import ShopHome from './components/Pages/UrbandStore/home.component'
 import ShopDetail from './components/Pages/UrbandStore/detail.component'
-import Tickets from './components/Pages/ticket.component'
+import TicketDetail from './components/Pages/TicketBook/ticketDetail'
 import ComingSoon from './components/Pages/comingsoon.component'
 import './assets/intro/css/intro.css';
 import './assets/css/app.css';
@@ -62,11 +62,11 @@ class App extends Component{
                 <Route path="/radio" component={Radio} />
                 <Route path="/store" component={ShopHome} />
                 <Route path="/detail" component={ ShopDetail} />
-                <Route path="/tickets" component={Tickets} />
                 <Route path="/coming-soon" component={ComingSoon} />
                 <Route path="/albums" exact component={ AlbumHome } />
                 <Route path={"/albums/detail/:id"} component={ AlbumDetail} />
                 <Route path="/vlog" component={ Vlog} />
+                <Route path={"/ticket-detail"} component={ TicketDetail} />
               
                 <HomePage/>
                 <WhoWeAre/>
@@ -77,7 +77,6 @@ class App extends Component{
                 <Clients/>
                 <Gallery/>
                 <Radio/>
-                <Tickets/>
                 <ComingSoon/>
               </Switch>
             </Scroll>

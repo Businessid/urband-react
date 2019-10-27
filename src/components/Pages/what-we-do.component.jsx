@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actionCreators from "../../../src/store/actions/";
+import ComingSoon from "../Pages/comingsoon.component";
 
 class WhatweDo extends Component {
   render() {
@@ -9,9 +10,14 @@ class WhatweDo extends Component {
     const detail = this.props.detail;
     const services = detail.whatwedo;
 
+    var isResponseData = false;
+    if (this.props.detail.success === true)
+    isResponseData = true;
+
 
     return (
       <div>
+         {isResponseData ? (
         <div className="page-padd">
           <div className="container">
             <div className="section-title style-four text-center">
@@ -42,6 +48,9 @@ class WhatweDo extends Component {
             )}
           </div>
         </div>
+        ) : (
+          <ComingSoon/>
+        )}
       </div>
     );
   }

@@ -20,7 +20,7 @@ class VolumeSlider extends Component {
       return (
           <div>
               <div className="store-ranger">
-                <div className='value'><span>Price:&nbsp;</span>{value}</div>
+                <div className="value"><span>Price:&nbsp;</span>{value}</div>
                 <Slider
                 value={value}
                 labels={0}

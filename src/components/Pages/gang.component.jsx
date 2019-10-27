@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Coverflow from "react-coverflow";
 import { StyleRoot } from "radium";
 import { connect } from "react-redux";
+import ComingSoon from "../Pages/comingsoon.component";
 import * as actionCreators from "../../../src/store/actions/";
 
 class Gang extends Component {
@@ -10,8 +11,13 @@ class Gang extends Component {
     const detail = this.props.detail;
     const gang = detail.gang;
 
+    var isResponseData = false;
+    if (this.props.detail.success === true)
+    isResponseData = true;
+
     return (
       <div>
+         {isResponseData ? (
         <section className="the-gang">
           <div className="container">
             <div className="section-title style-four">
@@ -59,6 +65,9 @@ class Gang extends Component {
             )}
           </div>
         </section>
+         ) : (
+          <ComingSoon/>
+        )}
       </div>
     );
   }

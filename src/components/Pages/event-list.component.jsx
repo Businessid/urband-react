@@ -117,7 +117,7 @@ class EventList extends Component {
                              
                             </div>
                             <Link
-                              to="/"
+                              to="/detail"
                               className="tim-btn tim-btn-bgt read-more-btn"
                             >
                               Buy Ticket

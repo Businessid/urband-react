@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import  FilterLeft  from '../../Pages/UrbandStore/filter.component'
+import '../ListingGrid/product-list.component.css';
 
 class ShopHome extends Component{
 
@@ -54,9 +55,11 @@ class ShopHome extends Component{
 
                                 <div className="product">
                                 <div className="product-thumb">
+                                     <Link to="/detail">
                                     <img className="img-responsive" src={require("../../../media/album/1.jpg")} alt="Product Thumb" />
+                                    </Link>
                                     <div className="product-thumb-hover">
-                                        <div className="btn-cart"><Link to="/detail">Add to Cart</Link></div>
+                                        <div className="btn-cart"><Link to="/">Add to Cart</Link></div>
                                     </div>
                                 </div>
                                 <div className="product-detail">

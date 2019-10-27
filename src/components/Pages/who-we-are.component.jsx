@@ -3,7 +3,7 @@ import WhatweDo from "../Pages/what-we-do.component";
 import InfoHero from "../Pages/info.component";
 import BannerHero from "../Banners/bannerHero";
 import Gang from "../Pages/gang.component";
-import UnderConstruction from "../Pages/underConsrtuction.component";
+import ComingSoon from "../Pages/comingsoon.component";
 import { Link } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faMixcloud } from "@fortawesome/free-brands-svg-icons";
@@ -60,7 +60,7 @@ class WhoWeAre extends Component {
             </div>
           </div>
           ) : (
-            <UnderConstruction/>
+            <ComingSoon/>
           )}
           </div>
 

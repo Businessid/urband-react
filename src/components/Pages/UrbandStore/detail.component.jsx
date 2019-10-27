@@ -80,14 +80,14 @@ class ShopDetail extends Component {
                     </p>
 
                     <div className="product-cart">
-                      <div class="quantity-input">
+                      <div className="quantity-input">
                         <button className="quantity-input__modifier quantity-input__modifier--left">
                           —
                         </button>
                         <input
                           type="text"
                           className="quantity-input__screen"
-                          value="0"
+                          value="0" defaultValue="0" onChange={this.handleChange}
                         />
                         <button className="quantity-input__modifier quantity-input__modifier--right">
                           ＋
