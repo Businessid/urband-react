@@ -34,19 +34,19 @@ class VolumeSlider extends Component {
               <h3 className="title">By Category</h3>
               <div className="form-check">
                 <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
-                <label className="form-check-label" for="defaultCheck1">
+                <label className="form-check-label" htmlFor="defaultCheck1">
                   Popular
                 </label>
               </div>
               <div className="form-check">
                 <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
-                <label className="form-check-label" for="defaultCheck1">
+                <label className="form-check-label" htmlFor="defaultCheck1">
                   Charts
                 </label>
               </div>
               <div className="form-check">
                 <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
-                <label className="form-check-label" for="defaultCheck1">
+                <label className="form-check-label" htmlFor="defaultCheck1">
                   New Releases
                 </label>
               </div>
@@ -56,19 +56,19 @@ class VolumeSlider extends Component {
               <h3 className="title">By Artist</h3>
               <div className="form-check">
                 <input className="form-check-input" type="checkbox" value="" id=""/>
-                <label className="form-check-label" for="">
+                <label className="form-check-label" htmlFor="defaultCheck1">
                   Sami Yusuf
                 </label>
               </div>
               <div className="form-check">
                 <input className="form-check-input" type="checkbox" value="" id=""/>
-                <label className="form-check-label" for="">
+                <label className="form-check-label" htmlFor="defaultCheck1">
                   John Lenon
                 </label>
               </div>
               <div className="form-check">
                 <input className="form-check-input" type="checkbox" value="" id=""/>
-                <label className="form-check-label" for="">
+                <label className="form-check-label" htmlFor="defaultCheck1">
                   Jim Morrison
                 </label>
               </div>

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import  FilterLeft  from '../../Pages/UrbandStore/filter.component'
-import ProductListHero from '../../Pages/ListingGrid/product-list-hero.component'
 
 class ShopHome extends Component{
 
@@ -10,7 +9,7 @@ class ShopHome extends Component{
         return (
 
 			<div>
-                <section className="page-header artist-banner">
+                <section className="page-header store-banner">
                     <div className="tim-container">
                         <div className="page-header-title text-center">
                             <h3>Store</h3>
@@ -52,14 +51,23 @@ class ShopHome extends Component{
                               
                             <div className="row products">
                                 <div className="col-md-4 col-sm-6 col-12">
-                                    <ProductListHero/>
+
+                                <div className="product">
+                                <div className="product-thumb">
+                                    <img className="img-responsive" src={require("../../../media/album/1.jpg")} alt="Product Thumb" />
+                                    <div className="product-thumb-hover">
+                                        <div className="btn-cart"><Link to="/detail">Add to Cart</Link></div>
+                                    </div>
                                 </div>
-                                <div className="col-md-4 col-sm-6 col-12">
-                                    <ProductListHero/>
+                                <div className="product-detail">
+                                    <h4 className="product-name">Music Album</h4>
+                                    <p className="product-price">$15</p>
+                                  
                                 </div>
-                                <div className="col-md-4 col-sm-6 col-12">
-                                    <ProductListHero/>
+                            </div>
+                                    
                                 </div>
+                              
                                
                             </div>    
 

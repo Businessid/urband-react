@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import ComingSoon from "../Pages/comingsoon.component";
 import BannerHero from "../Banners/bannerHero";
-import ReadMoreAndLess from 'react-read-more-less';
+import ReadMoreAndLess from "react-read-more-less";
 import { connect } from "react-redux";
 import * as actionCreators from "../../../src/store/actions/";
 
@@ -12,7 +12,6 @@ class Artist extends Component {
   }
 
   render() {
-    
     const image_url = "http://167.71.231.3/storage/";
     const posts = this.props.posts;
     return (
@@ -25,7 +24,6 @@ class Artist extends Component {
                 <div className="tim-container">
                   <div className="artist-timeline">
                     {posts.map(item => {
-                    
                       return (
                         <div
                           className="row no-gutters artist-row"
@@ -35,29 +33,21 @@ class Artist extends Component {
                             <div className="artist-about pr__30">
                               <h3 className="artist-name">{item.name}</h3>
                               <h6>{item.genre}</h6>
-                              <span>
+                              <span className="genere">
                                 Album: Rockstar, first rain, Love Song (More)
                               </span>
 
-                              
-                              {/* <div className="content" dangerouslySetInnerHTML={{
-                                  __html: item.about
-                                }}>
-                          </div> */}
-
-                          <div className="content">
-                          <ReadMoreAndLess
+                              <div className="content">
+                                <ReadMoreAndLess
                                   ref={this.ReadMore}
                                   className="read-more-content"
                                   charLimit={250}
                                   readMoreText="Read more"
                                   readLessText="Read less"
-                              >
-                                
-                                   {item.about}
-                                 
-                              </ReadMoreAndLess>
-                          </div>
+                                >
+                                  {item.about}
+                                </ReadMoreAndLess>
+                              </div>
                               <h4 className="alb-title">Album & Single</h4>
                               <div className="alb-single">
                                 <Link to="" className="single-items">
@@ -69,24 +59,6 @@ class Artist extends Component {
                                 <Link to="" className="single-items">
                                   <img
                                     src={require("../../media/about/7.jpg")}
-                                    alt="album"
-                                  />
-                                </Link>
-                                <Link to="" className="single-items">
-                                  <img
-                                    src={require("../../media/about/8.jpg")}
-                                    alt="album"
-                                  />
-                                </Link>
-                                <Link to="" className="single-items">
-                                  <img
-                                    src={require("../../media/about/9.jpg")}
-                                    alt="album"
-                                  />
-                                </Link>
-                                <Link to="" className="single-items">
-                                  <img
-                                    src={require("../../media/about/10.jpg")}
                                     alt="album"
                                   />
                                 </Link>

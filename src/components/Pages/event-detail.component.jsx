@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import { connect } from "react-redux";
+import BannerHero from "../Banners/bannerHero";
 import * as actionCreators from "../../../src/store/actions/";
 class EventDetail extends Component {
   componentDidMount() {
@@ -12,9 +13,7 @@ class EventDetail extends Component {
   render() {
     const event = this.props.event;
     const image_url = "http://167.71.231.3/storage/";
-    if (event)
-      console.log("gggggggggg", event);
-
+  
     const responsive = {
       superLargeDesktop: {
         // the naming can be any, depends on you.
@@ -37,7 +36,7 @@ class EventDetail extends Component {
 
     return (
       <div>
-        <section className="page-header event-header">
+        {/* <section className="page-header event-header">
           <div className="tim-container">
             <div className="page-header-title event-page-header text-center">
               <h2>{event.headline}</h2>
@@ -54,7 +53,8 @@ class EventDetail extends Component {
               <span>Events</span>
             </div>
           </div>
-        </section>
+        </section> */}
+           <BannerHero title={"Event Detail"}/>
 
         <section id="event-about">
           <div className="container">

@@ -124,7 +124,6 @@ export const fetchEventDetail = (id) => {
         })
             .then(res => res.json())
             .then(res => {
-                console.log("resssssssssss", res.result);
                 dispatch({
                     type: FETCH_EVENTDETAIL,
                     value: res.result

@@ -3,6 +3,7 @@ import WhatweDo from "../Pages/what-we-do.component";
 import InfoHero from "../Pages/info.component";
 import BannerHero from "../Banners/bannerHero";
 import Gang from "../Pages/gang.component";
+import UnderConstruction from "../Pages/underConsrtuction.component";
 import { Link } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faMixcloud } from "@fortawesome/free-brands-svg-icons";
@@ -24,14 +25,18 @@ class WhoWeAre extends Component {
     const image_url = "http://167.71.231.3/storage/";
     const detail = this.props.detail;
     const whoweare = detail.whoweare;
-    //const {Gang} = this.state;
-    //const about = atob(whoweare.description);
+
+    var isResponseData = false;
+    if (this.props.detail.success === true)
+    isResponseData = true;
+
 
     return (
       <div className="fullWrap">
         <BannerHero title={"Who We Are"}/>
-
         <section className="section-hero pb-0">
+        <div className="fullWrap">
+          {isResponseData ? (
           <div className="container">
             <div className="row">
               <div className="section-title style-four">
@@ -53,6 +58,10 @@ class WhoWeAre extends Component {
                 </div>
               </div>
             </div>
+          </div>
+          ) : (
+            <UnderConstruction/>
+          )}
           </div>
 
           <InfoHero />

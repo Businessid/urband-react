@@ -31,8 +31,9 @@ class EventList extends Component {
   render() {
     const image_url = "http://167.71.231.3/storage/";
     const events = this.props.events;
-    const desc = events.description;
-    function createMarkup(desc) { return {__html: desc}; };
+    // const desc = events.description;
+    // function createMarkup(desc) { return {__html: desc}; };
+   
     
     return (
       <div>
@@ -102,8 +103,6 @@ class EventList extends Component {
                               </ul>
                             </div>
                             <div className="entry-content">
-                              { }
-
                               {/* <div dangerouslySetInnerHTML={createMarkup(item.description)}/> */}
                               
                                 <ReadMoreAndLess
@@ -116,10 +115,6 @@ class EventList extends Component {
                             {item.description}
                               </ReadMoreAndLess>
                              
-
-                         
-                             
-                          
                             </div>
                             <Link
                               to="/"

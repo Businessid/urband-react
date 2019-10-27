@@ -19,6 +19,7 @@ import AlbumDetail from './components/Pages/Album/album-detail.component'
 import Vlog from './components/Pages/vlog.component'
 import Radio from './components/Pages/radio.component'
 import ShopHome from './components/Pages/UrbandStore/home.component'
+import ShopDetail from './components/Pages/UrbandStore/detail.component'
 import Tickets from './components/Pages/ticket.component'
 import ComingSoon from './components/Pages/comingsoon.component'
 import './assets/intro/css/intro.css';
@@ -60,6 +61,7 @@ class App extends Component{
                 <Route path="/gallery" component={Gallery} />
                 <Route path="/radio" component={Radio} />
                 <Route path="/store" component={ShopHome} />
+                <Route path="/detail" component={ ShopDetail} />
                 <Route path="/tickets" component={Tickets} />
                 <Route path="/coming-soon" component={ComingSoon} />
                 <Route path="/albums" exact component={ AlbumHome } />

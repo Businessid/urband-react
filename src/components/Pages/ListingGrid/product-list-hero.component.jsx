@@ -32,9 +32,9 @@ class ProductListHero extends Component {
                                 <div className="product-detail">
                                     <h4 className="product-name">Music Album</h4>
                                     {/* <p className="product-price">$15</p>
-                      <div className="detail"> 
-                       {this.props.children}
-                     </div>    */}
+                                    <div className="detail"> 
+                                    {this.props.children}
+                                    </div>    */}
                                 </div>
                             </div>
                         );
